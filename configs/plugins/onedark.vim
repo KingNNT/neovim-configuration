@@ -1,3 +1,2 @@
-call plug#begin('~/.config/nvim/bundle')
-Plug 'joshdick/onedark.vim'
-call plug#end()
+syntax on
+colorscheme onedark

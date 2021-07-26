@@ -1,7 +1,3 @@
-call plug#begin('~/.config/nvim/bundle')
-Plug 'scrooloose/nerdtree'
-call plug#end()
-
 map <C-b> :NERDTreeToggle<CR>
 map <C-i> :NERDTreeFind<CR>
 let g:NERDTreePatternMatchHighlightFullName = 1
