@@ -15,5 +15,5 @@
 ---
 
 Step 1: Install (Vim-Plug)[https://github.com/junegunn/vim-plug]
-Step 2: Clone this repo
+Step 2: Clone this repo to path `~/.config/nvim`
 Step 3: Open NeoVim and run `:PlugInstall`
