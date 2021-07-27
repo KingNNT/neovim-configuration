@@ -13,8 +13,9 @@
 -   Bitbucket Profile: [https://bitbucket.org/KingNNT/](https://bitbucket.org/KingNNT/)
 
 ---
+## How to install ?
 
-Step 1: Install (Vim-Plug)[https://github.com/junegunn/vim-plug]
+Step 1: Install [Vim-Plug](https://github.com/junegunn/vim-plug)
 
 Step 2: Clone this repo to path `~/.config/nvim`
 
