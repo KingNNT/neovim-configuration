@@ -12,6 +12,14 @@ set incsearch
 set hlsearch
 
 set number
+set cursorline
+
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
+set expandtab
+set autoindent
+
+set clipboard=unnamedplus
+
+set ttimeoutlen=50

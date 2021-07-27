@@ -1,11 +1,31 @@
 call plug#begin('~/.config/nvim/bundle')
 	Plug 'kevinoid/vim-jsonc'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'preservim/nerdtree'
-	Plug 'joshdick/onedark.vim'
-   	Plug 'jbgutierrez/vim-better-comments'
-   	Plug 'vim-scripts/Rainbow-Parenthesis'
-	Plug 'junegunn/fzf'
-	Plug 'Yggdroot/indentLine'
+
 	Plug 'wakatime/vim-wakatime'
+
+
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'joshdick/onedark.vim'
+
+
+	Plug 'scrooloose/nerdtree'
+   	Plug 'vim-scripts/Rainbow-Parenthesis'
+	Plug 'Yggdroot/indentLine'
+	Plug 'jiangmiao/auto-pairs'
+
+	
+	Plug 'preservim/nerdcommenter'
+   	Plug 'jbgutierrez/vim-better-comments'
+
+	
+	Plug 'junegunn/fzf'
+
+	Plug 'tpope/vim-surround'
+	Plug 'maxmellon/vim-jsx-pretty'
+	Plug 'leafgarland/typescript-vim'
+
+	Plug 'tpope/vim-fugitive'
+
 call plug#end()
