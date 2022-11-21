@@ -1,4 +1,4 @@
-for f in split(glob('~/.config/nvim/configs/plugins/*.vim'), '\n')
-   exe 'source' f
+for setting_file in split(glob('~/.config/nvim/configs/settings/*.vim'), '\n')
+   execute 'source' setting_file
 endfor
 
