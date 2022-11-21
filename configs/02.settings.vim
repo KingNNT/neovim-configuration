@@ -7,6 +7,7 @@ syntax on
 
 set encoding=UTF-8
 set mouse=a
+set mmp=5000
 
 set incsearch 
 set hlsearch

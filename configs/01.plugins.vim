@@ -9,7 +9,7 @@ call plug#begin('~/.config/nvim/bundle')
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'joshdick/onedark.vim'
+	Plug 'haishanh/night-owl.vim'
 
 	Plug 'scrooloose/nerdtree'
    	Plug 'vim-scripts/Rainbow-Parenthesis'
@@ -27,4 +27,7 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'leafgarland/typescript-vim'
 
 	Plug 'tpope/vim-fugitive'
+
+	Plug 'phpactor/phpactor'
+ 	Plug 'shawncplus/phpcomplete.vim'
 call plug#end()
