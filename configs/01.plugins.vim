@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'editorconfig/editorconfig-vim'
 	
 	Plug 'preservim/nerdcommenter'
-   	Plug 'jbgutierrez/vim-better-comments'
+   	Plug 'preservim/nerdcommenter'
 	
 	Plug 'junegunn/fzf'
 
@@ -30,4 +30,7 @@ call plug#begin('~/.config/nvim/bundle')
 
 	Plug 'phpactor/phpactor'
  	Plug 'shawncplus/phpcomplete.vim'
+
+	Plug 'tpope/vim-fugitive'
+	Plug 'airblade/vim-gitgutter'
 call plug#end()
