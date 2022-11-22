@@ -53,6 +53,9 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'sheerun/vim-polyglot'						" All language packs
   	"Plug 'yuezk/vim-js'                           	" Javascript
   	Plug 'MaxMEllon/vim-jsx-pretty'               	" JSX/React
+	Plug 'peitalin/vim-jsx-typescript'				" TSX
+	Plug 'styled-components/vim-styled-components'	" Styled Components
+	Plug 'jparise/vim-graphql'
   	"Plug 'jackguo380/vim-lsp-cxx-highlight'       	" C/C++
   	"Plug 'uiiaoo/java-syntax.vim'                 	" Java
 	Plug 'leafgarland/typescript-vim'				" Typescript
