@@ -67,6 +67,10 @@ nmap <M-Left> :vertical resize -1<CR>
 nmap <M-Down> :resize +1<CR>
 nmap <M-Up> :resize -1<CR>
 
+" Move line
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+
 " Search a hightlighted text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 nmap /\ :noh<CR>
