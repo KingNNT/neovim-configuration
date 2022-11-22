@@ -59,6 +59,7 @@ call plug#begin('~/.config/nvim/bundle')
   	"Plug 'jackguo380/vim-lsp-cxx-highlight'       	" C/C++
   	"Plug 'uiiaoo/java-syntax.vim'                 	" Java
 	Plug 'leafgarland/typescript-vim'				" Typescript
+	Plug 'nvim-treesitter/nvim-treesitter'
 
 
 " Debugging
