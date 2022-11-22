@@ -70,9 +70,8 @@ call plug#begin('~/.config/nvim/bundle')
   	Plug 'airblade/vim-gitgutter'                 	" Git show changes 
   	Plug 'samoshkin/vim-mergetool'                	" Git merge
 
-" Calculator coding	
+" Support coding	
 	Plug 'wakatime/vim-wakatime'
-	
-
+	Plug '907th/vim-auto-save'
 
 call plug#end()
