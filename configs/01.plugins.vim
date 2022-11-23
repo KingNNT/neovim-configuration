@@ -47,6 +47,7 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'tpope/vim-surround'
 	Plug 'phpactor/phpactor'
  	Plug 'shawncplus/phpcomplete.vim'
+	Plug 'vim-test/vim-test'
 
 " Code syntax highlight
 	Plug 'sheerun/vim-polyglot'						" All language packs
