@@ -12,6 +12,7 @@ set list
 set foldmethod=syntax       " 
 set foldnestmax=1
 set foldlevelstart=0        "  
+set nofoldenable            " no fold when open file
 set number                  " Show line number
 set ignorecase              " Enable case-sensitive 
 set cursorline
