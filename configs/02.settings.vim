@@ -31,7 +31,6 @@ set ttimeoutlen=50
 set incsearch 
 set hlsearch
 au! BufNewFile,BufRead *.json set foldmethod=indent " Change foldmethod for specific filetype
-autocmd BufEnter * :set scroll=10
 syntax on
 
 " Enable copying from vim to clipboard

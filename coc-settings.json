@@ -6,6 +6,9 @@
 		"typescriptreact"
 	],
 	"tsserver.formatOnType": true,
+	"tsserver.trace.server": "verbose",
 	"coc.preferences.formatOnType": true,
-	"eslint.packageManager": "yarn"
+	"eslint.packageManager": "yarn",
+	"phpactor.enable": false,
+	"languageserver": {}
 }
