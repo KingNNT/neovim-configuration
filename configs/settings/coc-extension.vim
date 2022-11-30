@@ -20,7 +20,6 @@ let g:coc_global_extensions = [
     \'coc-marketplace', 
     \'coc-json', 
     \'coc-css', 
-    \'coc-vetur', 
     \'@yaegassy/coc-volar',
     \'coc-phpactor',
     \'@yaegassy/coc-phpstan',
