@@ -12,7 +12,8 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'Xuyuanp/nerdtree-git-plugin'            	" Git status
 	Plug 'ryanoasis/vim-devicons'                 	" Icon
 	Plug 'johnstef99/vim-nerdtree-syntax-highlight'
-	Plug 'unkiwii/vim-nerdtree-sync'              	" Sync current file 
+	Plug 'unkiwii/vim-nerdtree-sync'              	" Sync current file
+	Plug 'preservim/tagbar'							" Tag bar
 
 " File search
 	Plug 'junegunn/fzf', 
