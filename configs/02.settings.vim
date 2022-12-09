@@ -2,11 +2,13 @@
 " => General settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a                 " Enable mouse
-set tabstop=2               " 
-set softtabstop=0           "
-set shiftwidth=2            " 
-set expandtab
-set autoindent
+set tabstop=2               " Width of tab character | The width of a hard tabstop measured in "spaces" -- effectively the (maximum) width of an actual tab character.
+set softtabstop=0           " Fine tunes the amount of white space to be added | Setting this to a non-zero value other than tabstop will make the tab key (in insert mode) insert a combination of spaces (and possibly tabs) to simulate tab stops at this width.
+set shiftwidth=2            " Determines the amount of whitespace to add in normal mode | The size of an "indent". It's also measured in spaces, so if your code base indents with tab characters then you want shiftwidth to equal the number of tab characters times tabstop. This is also used by things like the =, > and < commands.
+set expandtab               " When this option is enabled, vi will use spaces instead of tabs | Enabling this will make the tab key (in insert mode) insert spaces instead of tab characters. This also affects the behavior of the retab command.
+set smarttab                " Inserts blanks on a <Tab> key (as per sw, ts and sts). | Enabling this will make the tab key (in insert mode) insert spaces or tabs to go to the next indent of the next tabstop when the cursor is at the beginning of a line (i.e. the only preceding characters are whitespace).
+set autoindent              " Copy indent from current line when starting a new line.
+
 set listchars=tab:\¦\       " Tab character
 set list
 set foldmethod=syntax       " 
