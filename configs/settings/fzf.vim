@@ -29,10 +29,10 @@ let g:fzf_colors = {
 " :Files
 command! -bang -nargs=? -complete=dir Files
    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always --theme=TwoDark --style=header,numbers,snip --line-range :300 {}']}, <bang>0)
-map <F6> :Files<CR> 
+nnoremap <silent> <F6> :Files<CR> 
 
 " :Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': ['--exact', '--layout=reverse']}, <bang>0)
-map <F7> :Rg<CR>
+nnoremap <silent> <F7> :Rg<CR>
