@@ -61,7 +61,8 @@ call plug#begin('~/.config/nvim/bundle')
   	"Plug 'uiiaoo/java-syntax.vim'                 	" Java
 	Plug 'leafgarland/typescript-vim'				" Typescript
 	Plug 'nvim-treesitter/nvim-treesitter'
-
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'folke/todo-comments.nvim'
 
 " Debugging
   	Plug 'puremourning/vimspector'                	" Vimspector
