@@ -19,6 +19,7 @@ set number                  " Show line number
 set ignorecase              " Enable case-sensitive 
 set cursorline
 set encoding=UTF-8
+set modifiable
 
 
 " Disable backup
