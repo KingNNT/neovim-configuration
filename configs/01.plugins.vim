@@ -63,6 +63,7 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'folke/todo-comments.nvim'
+	Plug 'ap/vim-css-color'							" Color CSS
 
 " Debugging
   	Plug 'puremourning/vimspector'                	" Vimspector
