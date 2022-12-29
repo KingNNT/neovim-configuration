@@ -64,6 +64,7 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'folke/todo-comments.nvim'
 	Plug 'ap/vim-css-color'							" Color CSS
+	Plug 'leafOfTree/vim-matchtag'					" Match Tag
 
 " Debugging
   	Plug 'puremourning/vimspector'                	" Vimspector
