@@ -1,9 +1,9 @@
 
 let g:coc_global_extensions = [
-    \'coc-blade'
+    \'coc-blade',
     \'coc-css',
     \'coc-cssmodules',
-    \'coc-emmet'
+    \'coc-emmet',
     \'coc-eslint',
     \'coc-explorer',
     \'coc-fzf-preview',
