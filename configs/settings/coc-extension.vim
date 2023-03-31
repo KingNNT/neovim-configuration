@@ -12,7 +12,6 @@ let g:coc_global_extensions = [
     \'coc-html',
     \'coc-json',
     \'coc-markdownlint',
-    \'coc-phpls',
     \'coc-prettier',
     \'coc-snippets',
     \'coc-sql',
