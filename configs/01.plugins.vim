@@ -31,7 +31,6 @@ call plug#begin('~/.config/nvim/bundle')
 " Code intellisense
 	Plug 'neoclide/coc.nvim', 
 		\ {'branch': 'release'}                     " Language server protocol (LSP) 
-	Plug 'pappasam/coc-jedi',                     	" Jedi language server 
 	Plug 'jiangmiao/auto-pairs'                   	" Parenthesis auto 
 	Plug 'alvan/vim-closetag'
 	Plug 'mattn/emmet-vim' 
@@ -46,7 +45,6 @@ call plug#begin('~/.config/nvim/bundle')
 		\ }
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'tpope/vim-surround'
-	Plug 'phpactor/phpactor'
  	Plug 'shawncplus/phpcomplete.vim'
 	Plug 'vim-test/vim-test'
 

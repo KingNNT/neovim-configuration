@@ -31,5 +31,6 @@ let g:coc_global_extensions = [
     \'coc-php-cs-fixer',
     \'coc-spell-checker', 
     \'coc-psalm',
-    \'@yaegassy/coc-intelephense'
+    \'@yaegassy/coc-intelephense',
+    \'coc-jedi'
     \]
