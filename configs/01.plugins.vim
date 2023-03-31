@@ -53,6 +53,7 @@ call plug#begin('~/.config/nvim/bundle')
 " Code syntax highlight
 	Plug 'sheerun/vim-polyglot'						" All language packs
   	"Plug 'yuezk/vim-js'                           	" Javascript
+	Plug 'posva/vim-vue'							" VueJS
   	Plug 'MaxMEllon/vim-jsx-pretty'               	" JSX/React
 	Plug 'peitalin/vim-jsx-typescript'				" TSX
 	Plug 'styled-components/vim-styled-components'	" Styled Components
