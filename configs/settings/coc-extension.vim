@@ -31,5 +31,5 @@ let g:coc_global_extensions = [
     \'coc-spell-checker', 
     \'coc-psalm',
     \'@yaegassy/coc-intelephense',
-    \'coc-jedi'
+    \'coc-pyright'
     \]
