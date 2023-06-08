@@ -70,7 +70,7 @@ call plug#begin('~/.config/nvim/bundle')
 
 " Source code version control 
   	Plug 'tpope/vim-fugitive'                     	" Git infomation 
-  	Plug 'tpope/vim-rhubarb' 
+  	Plug 'tpope/vim-rhubarb' 						" Github extension for vim-fugitiv
   	Plug 'airblade/vim-gitgutter'                 	" Git show changes 
   	Plug 'samoshkin/vim-mergetool'                	" Git merge
 
