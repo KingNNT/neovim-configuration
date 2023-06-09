@@ -1,3 +1,3 @@
 ## Enviroment
 
-- [Neovim](https://github.com/neovim/neovim): v0.8.1
+- [Neovim](https://github.com/neovim/neovim): v0.9.1

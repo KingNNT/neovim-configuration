@@ -1,6 +1,10 @@
 ## How to install ?
 
-- **_Install all [requirement](./requirement.md)_**
+- Install [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
+I suggest that you should install by `AppImage` if you have used a linux distro, because it will update lastest quickly
+
+- **_Install all [requirement](./requirements.md)_**
 
 - Clone this repo to path:
 
