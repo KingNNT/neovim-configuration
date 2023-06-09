@@ -4,7 +4,7 @@
 
 I suggest that you should install by `AppImage` if you have used a linux distro, because it will update lastest quickly
 
-- **_Install all [requirement](./requirements.md)_**
+- **_Install all [requirement](./Requirements.md)_**
 
 - Clone this repo to path:
 

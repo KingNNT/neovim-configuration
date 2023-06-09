@@ -4,4 +4,4 @@
 
 ---
 
-Please read the [project's wiki](./wiki/index.md)
+Please read the [project's wiki](./wiki/Home.md)
