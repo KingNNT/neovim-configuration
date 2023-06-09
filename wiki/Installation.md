@@ -1,4 +1,4 @@
-## How to install ?
+# How to install ?
 
 - Install [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
