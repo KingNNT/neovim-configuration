@@ -3,6 +3,7 @@
 call plug#begin('~/.config/nvim/bundle')
 " Setting
 	Plug 'tpope/vim-sensible'						" A universal set of defaults
+	Plug 'neovim/nvim-lspconfig'							" Neovim lsp config
 
 " Theme
 	Plug 'haishanh/night-owl.vim'
