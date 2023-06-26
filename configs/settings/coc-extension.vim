@@ -3,6 +3,7 @@ let g:coc_global_extensions = [
     \'coc-blade',
     \'coc-css',
     \'coc-cssmodules',
+    \'coc-db',
     \'coc-emmet',
     \'coc-eslint',
     \'coc-explorer',

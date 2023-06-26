@@ -79,4 +79,8 @@ call plug#begin('~/.config/nvim/bundle')
 	Plug 'wakatime/vim-wakatime'
 	Plug '907th/vim-auto-save'
 
+" Support database
+	Plug 'tpope/vim-dadbod'
+	Plug 'kristijanhusak/vim-dadbod-ui'
+
 call plug#end()
