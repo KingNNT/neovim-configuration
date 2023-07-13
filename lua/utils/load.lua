@@ -2,6 +2,7 @@ local M = {}
 local merge_tb = vim.tbl_deep_extend
 
 M.load_core = function()
+    require('core.globals')
     require('core')
 end
 

@@ -63,9 +63,7 @@ Plug 'jparise/vim-graphql'                                        -- a Vim plugi
 
 Plug 'puremourning/vimspector'                                    -- a multi-language debugging system for Vim
 
-Plug 'tpope/vim-fugitive'                                         -- a Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-rhubarb'                                          -- GitHub extension for fugitive.vim
-Plug 'airblade/vim-gitgutter'                                     -- a Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
+Plug('lewis6991/gitsigns.nvim')                                   -- Git integration for buffers
 
 Plug 'wakatime/vim-wakatime'                                      -- vim plugin for automatic time tracking and metrics generated from your programming activity.
 
@@ -83,6 +81,7 @@ local core_conf_files = {
     "dashboard-nvim.lua",
     "emmet-vim.lua",
     "fzf.vim",
+    "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
@@ -94,7 +93,6 @@ local core_conf_files = {
     "todo-comments.vim",
     "toggleterm.lua",
     "vim-dadbod-ui.vim",
-    "vim-gitgutter.vim",
     "vim-test.vim",
     "vimspector.vim",
     "vista.vim"
