@@ -46,15 +46,9 @@ Plug 'vim-test/vim-test'                                          -- run your te
 
 Plug 'sheerun/vim-polyglot'                                       -- a solid language pack for Vim.
 
-Plug 'posva/vim-vue'                                              -- syntax Highlight for Vue.js components
-Plug 'MaxMEllon/vim-jsx-pretty'                                   -- [Vim script] JSX and TSX syntax pretty highlighting for vim.
-Plug 'peitalin/vim-jsx-typescript'                                -- react JSX syntax highlighting for vim and Typescript
-Plug 'leafgarland/typescript-vim'                                 -- typescript syntax files for Vim
-Plug 'folke/todo-comments.nvim'                                   -- highlight, list and search todo comments in your projects
-Plug 'ap/vim-css-color'                                           -- highlight color css
+Plug 'lukas-reineke/indent-blankline.nvim'                        -- Indentlines
 Plug 'leafOfTree/vim-matchtag'                                    -- highlight matching tags in any files such as html, xml, js, jsx, vue, svelte.
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- Syntax highlighting
-Plug 'lukas-reineke/indent-blankline.nvim'                        -- Indentlines
 
 Plug 'jparise/vim-graphql'                                        -- a Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 
@@ -87,7 +81,6 @@ local core_conf_files = {
     "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",
-    "todo-comments.vim",
     "toggleterm.lua",
     "vim-dadbod-ui.vim",
     "vim-test.vim",
