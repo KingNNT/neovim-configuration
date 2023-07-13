@@ -33,5 +33,9 @@
         "unnamedplus",
         "wakatime",
         "Yggdroot"
-    ]
+    ],
+    "Lua.diagnostics.globals": [
+        "vim",
+        "lfs"
+    ],
 }

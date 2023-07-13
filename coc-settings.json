@@ -10,5 +10,6 @@
 	"coc.preferences.formatOnType": true,
 	"eslint.packageManager": "yarn",
 	"phpactor.enable": false,
-	"languageserver": {}
+  "languageserver": {},
+  "snippets.ultisnips.pythonPrompt": false
 }
