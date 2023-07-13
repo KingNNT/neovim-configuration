@@ -4,19 +4,18 @@ local environment = require("configs.default").env
 local bundle_folder = environment.path .. '/bundle'
 vim.call('plug#begin', bundle_folder)
 
-Plug 'tpope/vim-sensible'     -- a universal set of defaults
-Plug 'nvim-lua/plenary.nvim'  -- support module for neovim
+Plug 'tpope/vim-sensible'    -- a universal set of defaults
+Plug 'nvim-lua/plenary.nvim' -- support module for neovim
 
-Plug 'haishanh/night-owl.vim' -- theme
+-- Plug 'haishanh/night-owl.vim' -- theme
+Plug 'oxfist/night-owl.nvim' -- theme
 
 
 Plug 'neovim/nvim-lspconfig'                                      -- neovim lsp config
 
-Plug 'ryanoasis/vim-devicons'                                     -- adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
 Plug 'nvim-tree/nvim-web-devicons'                                -- lua `fork` of vim-devicons for neovim
 
-Plug 'vim-airline/vim-airline'                                    -- lean & mean status/tabline for vim that's light as air
-Plug 'vim-airline/vim-airline-themes'                             -- a collection of themes for vim-airline
+Plug 'nvim-lualine/lualine.nvim'                                  -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 
 Plug('nvim-tree/nvim-tree.lua')                                   -- a file explorer tree for neovim written in lua
 
@@ -25,7 +24,7 @@ Plug 'preservim/tagbar'                                           -- Tagbar
 Plug('junegunn/fzf', { ['do'] = '-> fzf#install()' })             -- Fuzzy finder
 Plug 'junegunn/fzf.vim'                                           -- fzf & vim
 
-Plug 'voldikss/vim-floaterm'                                      -- float terminal
+Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })                -- terminal
 
 Plug('neoclide/coc.nvim', { ['branch'] = 'release' })             -- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 
@@ -80,20 +79,20 @@ vim.call('plug#end')
 
 
 local core_conf_files = {
-    "airline.vim",
     "coc.lua",
     "dashboard-nvim.lua",
     "emmet-vim.lua",
-    "floaterm.vim",
     "fzf.vim",
     "indent-blankline.lua",
     "lspconfig.lua",
+    "lualine.lua",
     "nerdcommenter.vim",
-    "night-owl.vim",
+    "night-owl.lua",
     "nvim-tree.lua",
     "tagbar.vim",
     "telescope.lua",
     "todo-comments.vim",
+    "toggleterm.lua",
     "vim-dadbod-ui.vim",
     "vim-gitgutter.vim",
     "vim-test.vim",
