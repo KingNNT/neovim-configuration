@@ -84,6 +84,7 @@ local core_conf_files = {
     "nerdcommenter.vim",
     "night-owl.lua",
     "nvim-tree.lua",
+    "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",
     "todo-comments.vim",
