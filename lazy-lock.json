@@ -8,6 +8,7 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "4541d690816cb99a7fc248f1486aa87f3abce91c" },
   "lazy.nvim": { "branch": "main", "commit": "14d76aac4bd3ff07c1fca074c210f28f766a931e" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
+  "night-owl.nvim": { "branch": "main", "commit": "4335d8658138eee983abab988d9aeebb0a99b8e1" },
   "nvim-autopairs": { "branch": "master", "commit": "9d121c1dffba63a5fba893cfd0fdd9dec609c5bf" },
   "nvim-lspconfig": { "branch": "master", "commit": "ba74226cac83eacb435827e028f810212147937b" },
   "nvim-tree.lua": { "branch": "master", "commit": "a708bd2413d467929b5019ec1bce7b1f428438bc" },

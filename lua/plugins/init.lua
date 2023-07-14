@@ -16,7 +16,7 @@ local core_conf_files = {
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
-    "night-owl",
+    "night-owl.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
     "nvim-web-devicons.lua",
