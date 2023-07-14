@@ -8,6 +8,7 @@ Plug 'nvim-lua/plenary.nvim'                                          -- support
 Plug 'tpope/vim-sensible'                                             -- a universal set of defaults
 
 Plug 'oxfist/night-owl.nvim'                                          -- theme
+Plug 'folke/tokyonight.nvim'                                          -- theme
 Plug 'nvim-tree/nvim-web-devicons'                                    -- lua `fork` of vim-devicons for neovim
 
 Plug 'neovim/nvim-lspconfig'                                          -- neovim lsp config
@@ -41,8 +42,6 @@ Plug 'tpope/vim-surround'                                         -- delete/chan
 Plug 'shawncplus/phpcomplete.vim'                                 -- improved PHP omnicompletion
 
 Plug 'vim-test/vim-test'                                          -- run your tests at the speed of thought
-
-Plug 'sheerun/vim-polyglot'                                       -- a solid language pack for Vim.
 
 Plug 'lukas-reineke/indent-blankline.nvim'                        -- Indentlines
 Plug 'leafOfTree/vim-matchtag'                                    -- highlight matching tags in any files such as html, xml, js, jsx, vue, svelte.

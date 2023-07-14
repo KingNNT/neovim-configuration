@@ -3,7 +3,6 @@ local plugins = {
         "nvim-lua/plenary.nvim",
         lazy = false,
         priority = 1000,
-
     },
     {
         "tpope/vim-sensible",
@@ -16,6 +15,15 @@ local plugins = {
         priority = 980,
         config = function()
             vim.cmd.colorscheme("night-owl")
+        end,
+    },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 980,
+        enable = false,
+        config = function()
+            vim.cmd.colorscheme("tokyonight")
         end,
     },
     {
@@ -130,19 +138,11 @@ local plugins = {
         lazy = true,
     },
     {
-        'tpope/vim-surround',
-        lazy = true,
-    },
-    {
         'shawncplus/phpcomplete.vim',
         lazy = true,
     },
     {
         'vim-test/vim-test',
-        lazy = true,
-    },
-    {
-        'sheerun/vim-polyglot',
         lazy = true,
     },
     {
@@ -190,4 +190,6 @@ local plugins = {
     }
 }
 
-require("lazy").setup(plugins)
+local config = require 'plugins.manager.lazy.configs.lazy'
+
+require("lazy").setup(plugins, config)
