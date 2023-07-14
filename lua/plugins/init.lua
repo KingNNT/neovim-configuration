@@ -34,7 +34,8 @@ Plug 'windwp/nvim-autopairs'                                      -- autoclosing
 
 Plug 'mattn/emmet-vim'                                            -- support for expanding abbreviations similar to emmet
 
-Plug 'preservim/nerdcommenter'                                    -- intensely nerdy commenting powers
+Plug 'numToStr/Comment.nvim'                                      -- smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
+Plug 'nvim-ts-context-commentstring'                              -- Neovim treesitter plugin for setting the commentstring based on the cursor location in a file.
 
 Plug 'editorconfig/editorconfig-vim'                              -- editorConfig plugin for Vim
 
@@ -69,15 +70,16 @@ vim.call('plug#end')
 
 local core_conf_files = {
     "coc.lua",
+    "Comment.lua",
     "dashboard-nvim.lua",
     "emmet-vim.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
-    "nerdcommenter.vim",
     "night-owl.lua",
     "nvim-tree.lua",
+    "nvim-treesitter.lua",
     "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",
