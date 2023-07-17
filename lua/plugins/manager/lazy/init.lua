@@ -167,8 +167,13 @@ local plugins = {
         lazy = true,
     },
     {
+        'tpope/vim-fugitive',
+        lazy = true,
+    },
+    {
         'lewis6991/gitsigns.nvim',
         lazy = true,
+        dependencies = { { 'tpope/vim-fugitive' } }
     },
     {
         'wakatime/vim-wakatime',

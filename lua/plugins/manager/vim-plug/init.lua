@@ -25,40 +25,40 @@ Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' }) -- plugin 
 
 Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })                    -- terminal
 
+Plug 'jiangmiao/auto-pairs'                                           -- insert or delete brackets, parens, quotes in pair.
+Plug 'alvan/vim-closetag'                                             -- auto close (X)HTML tags
+Plug 'windwp/nvim-autopairs'                                          -- autoclosing braces and html tags
 
-Plug 'jiangmiao/auto-pairs'                                       -- insert or delete brackets, parens, quotes in pair.
-Plug 'alvan/vim-closetag'                                         -- auto close (X)HTML tags
-Plug 'windwp/nvim-autopairs'                                      -- autoclosing braces and html tags
+Plug 'mattn/emmet-vim'                                                -- support for expanding abbreviations similar to emmet
 
-Plug 'mattn/emmet-vim'                                            -- support for expanding abbreviations similar to emmet
+Plug 'numToStr/Comment.nvim'                                          -- smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
+Plug 'nvim-ts-context-commentstring'                                  -- Neovim treesitter plugin for setting the commentstring based on the cursor location in a file.
 
-Plug 'numToStr/Comment.nvim'                                      -- smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
-Plug 'nvim-ts-context-commentstring'                              -- Neovim treesitter plugin for setting the commentstring based on the cursor location in a file.
+Plug 'editorconfig/editorconfig-vim'                                  -- editorConfig plugin for Vim
 
-Plug 'editorconfig/editorconfig-vim'                              -- editorConfig plugin for Vim
+Plug 'tpope/vim-surround'                                             -- delete/change/add parentheses/quotes/XML-tags/much more with ease
 
-Plug 'tpope/vim-surround'                                         -- delete/change/add parentheses/quotes/XML-tags/much more with ease
+Plug 'shawncplus/phpcomplete.vim'                                     -- improved PHP omnicompletion
 
-Plug 'shawncplus/phpcomplete.vim'                                 -- improved PHP omnicompletion
+Plug 'vim-test/vim-test'                                              -- run your tests at the speed of thought
 
-Plug 'vim-test/vim-test'                                          -- run your tests at the speed of thought
+Plug 'lukas-reineke/indent-blankline.nvim'                            -- Indentlines
+Plug 'leafOfTree/vim-matchtag'                                        -- highlight matching tags in any files such as html, xml, js, jsx, vue, svelte.
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })     -- Syntax highlighting
 
-Plug 'lukas-reineke/indent-blankline.nvim'                        -- Indentlines
-Plug 'leafOfTree/vim-matchtag'                                    -- highlight matching tags in any files such as html, xml, js, jsx, vue, svelte.
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- Syntax highlighting
+Plug 'jparise/vim-graphql'                                            -- a Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 
-Plug 'jparise/vim-graphql'                                        -- a Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
+Plug 'puremourning/vimspector'                                        -- a multi-language debugging system for Vim
 
-Plug 'puremourning/vimspector'                                    -- a multi-language debugging system for Vim
+Plug('tpope/vim-fugitive')                                            -- A Git wrapper so awesome, it should be illegal
+Plug('lewis6991/gitsigns.nvim')                                       -- Git integration for buffers
 
-Plug('lewis6991/gitsigns.nvim')                                   -- Git integration for buffers
+Plug 'wakatime/vim-wakatime'                                          -- vim plugin for automatic time tracking and metrics generated from your programming activity.
 
-Plug 'wakatime/vim-wakatime'                                      -- vim plugin for automatic time tracking and metrics generated from your programming activity.
+Plug 'tpope/vim-dadbod'                                               -- modern database interface for Vim
+Plug 'kristijanhusak/vim-dadbod-ui'                                   -- simple UI for vim dadbod
 
-Plug 'tpope/vim-dadbod'                                           -- modern database interface for Vim
-Plug 'kristijanhusak/vim-dadbod-ui'                               -- simple UI for vim dadbod
-
-Plug('nvimdev/dashboard-nvim', { ['event'] = 'VimEnter' })        -- vim dashboard
+Plug('nvimdev/dashboard-nvim', { ['event'] = 'VimEnter' })            -- vim dashboard
 
 
 vim.call('plug#end')
