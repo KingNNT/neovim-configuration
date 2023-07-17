@@ -76,13 +76,17 @@ local art_4 = {
 }
 
 require('dashboard').setup {
-    hide = {
-        statusline = false,
-        winbar = false,
-    },
-    theme = 'hyper',
+    theme = 'hyper',            --  theme is doom and hyper default is hyper
+    disable_move = false,       --  default is false disable move keymap for hyper
+    shortcut_type = 'letter',   --  shorcut type 'letter' or 'number'
+    change_to_vcs_root = false, -- default is false,for open file in hyper mru. it will change to the root of vcs
     config = {
-        packages = { enable = false },
+        week_header = {
+            enable = false,
+            concat = nil,
+            append = nil,
+        },
+        packages = { enable = true }, -- show how many plugins neovim loaded
         project = { enable = false },
         mru = { enable = false },
         header = art_2,
@@ -101,5 +105,16 @@ require('dashboard').setup {
                 key = 'f',
             },
         },
+    },
+    hide = {
+        statusline = false, -- hide statusline default is true
+        tabline = false,    -- hide the tabline
+        winbar = false,     -- hide winbar
+    },
+    preview = {
+        command = '',    -- preview command
+        file_path = nil, -- preview file path
+        file_height = 0, -- preview file height
+        file_width = 0,  -- preview file width
     },
 }

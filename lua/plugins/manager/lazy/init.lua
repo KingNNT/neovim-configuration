@@ -17,15 +17,14 @@ local plugins = {
             vim.cmd.colorscheme("night-owl")
         end,
     },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 980,
-        enable = false,
-        config = function()
-            vim.cmd.colorscheme("tokyonight")
-        end,
-    },
+    -- {
+    --     "folke/tokyonight.nvim",
+    --     lazy = false,
+    --     priority = 980,
+    --     config = function()
+    --         vim.cmd.colorscheme("tokyonight")
+    --     end,
+    -- },
     {
         "nvim-tree/nvim-web-devicons",
         lazy = false,
