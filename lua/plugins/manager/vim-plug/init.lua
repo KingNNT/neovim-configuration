@@ -14,6 +14,12 @@ Plug 'nvim-tree/nvim-web-devicons'                                    -- lua `fo
 Plug 'neovim/nvim-lspconfig'                                          -- neovim lsp config
 Plug('neoclide/coc.nvim', { ['branch'] = 'release' })                 -- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 
+Plug 'hrsh7th/cmp-nvim-lsp'                                           -- A completion plugin for neovim
+Plug 'hrsh7th/cmp-buffer'                                             -- A completion plugin for neovim
+Plug 'hrsh7th/cmp-path'                                               -- A completion plugin for neovim
+Plug 'hrsh7th/cmp-cmdline'                                            -- A completion plugin for neovim
+Plug 'hrsh7th/nvim-cmp'                                               -- A completion plugin for neovim
+
 Plug 'nvim-lualine/lualine.nvim'                                      -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 
 Plug('nvim-tree/nvim-tree.lua')                                       -- a file explorer tree for neovim written in lua
@@ -25,8 +31,6 @@ Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' }) -- plugin 
 
 Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })                    -- terminal
 
-Plug 'jiangmiao/auto-pairs'                                           -- insert or delete brackets, parens, quotes in pair.
-Plug 'alvan/vim-closetag'                                             -- auto close (X)HTML tags
 Plug 'windwp/nvim-autopairs'                                          -- autoclosing braces and html tags
 
 Plug 'mattn/emmet-vim'                                                -- support for expanding abbreviations similar to emmet
@@ -38,12 +42,9 @@ Plug 'editorconfig/editorconfig-vim'                                  -- editorC
 
 Plug 'tpope/vim-surround'                                             -- delete/change/add parentheses/quotes/XML-tags/much more with ease
 
-Plug 'shawncplus/phpcomplete.vim'                                     -- improved PHP omnicompletion
-
 Plug 'vim-test/vim-test'                                              -- run your tests at the speed of thought
 
 Plug 'lukas-reineke/indent-blankline.nvim'                            -- Indentlines
-Plug 'leafOfTree/vim-matchtag'                                        -- highlight matching tags in any files such as html, xml, js, jsx, vue, svelte.
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })     -- Syntax highlighting
 
 Plug 'jparise/vim-graphql'                                            -- a Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.

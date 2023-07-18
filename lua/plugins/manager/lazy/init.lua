@@ -82,6 +82,16 @@ local plugins = {
         lazy = false,
     },
     {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+        },
+    },
+    {
         "nvim-lualine/lualine.nvim",
         lazy = true,
     },
@@ -91,7 +101,6 @@ local plugins = {
     },
     {
         "preservim/tagbar",
-        lazy = true,
     },
     {
         'nvim-telescope/telescope.nvim',
@@ -110,20 +119,11 @@ local plugins = {
         lazy = true,
     },
     {
-        'jiangmiao/auto-pairs',
-        lazy = true,
-    },
-    {
-        'alvan/vim-closetag',
-        lazy = true,
-    },
-    {
         'windwp/nvim-autopairs',
-        lazy = true,
+        event = "InsertEnter",
     },
     {
         'mattn/emmet-vim',
-        lazy = true,
     },
     {
         'numToStr/Comment.nvim',
@@ -131,13 +131,6 @@ local plugins = {
     },
     {
         'nvim-ts-context-commentstring',
-        dependencies = {
-            'JoosepAlviste/nvim-ts-context-commentstring',
-        },
-        lazy = true,
-    },
-    {
-        'shawncplus/phpcomplete.vim',
         lazy = true,
     },
     {
@@ -149,12 +142,11 @@ local plugins = {
         lazy = true,
     },
     {
-        'leafOfTree/vim-matchtag',
-        lazy = true,
-    },
-    {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
+        dependencies = {
+            'JoosepAlviste/nvim-ts-context-commentstring',
+        },
         lazy = true,
     },
     {
@@ -176,7 +168,6 @@ local plugins = {
     },
     {
         'wakatime/vim-wakatime',
-        lazy = true,
     },
     {
         'tpope/vim-dadbod',
@@ -184,7 +175,7 @@ local plugins = {
     },
     {
         'kristijanhusak/vim-dadbod-ui',
-        lazy = true,
+        dependencies = { { 'tpope/vim-dadbod' } },
     },
     {
         'nvimdev/dashboard-nvim',

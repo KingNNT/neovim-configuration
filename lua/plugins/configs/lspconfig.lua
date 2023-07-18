@@ -1,5 +1,6 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
+local util = require 'lspconfig.util'
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -38,3 +39,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+-- lspconfig.phpactor.setup {
+--   cmd = { "phpactor", "language-server" },
+--   filetypes = { "php" },
+--   root_dir = util.root_pattern("composer.json", ".git")
+-- }
