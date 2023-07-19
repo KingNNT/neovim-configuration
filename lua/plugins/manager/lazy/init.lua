@@ -96,6 +96,9 @@ local plugins = {
         lazy = true,
     },
     {
+        "editorconfig/editorconfig-vim",
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         lazy = true,
     },

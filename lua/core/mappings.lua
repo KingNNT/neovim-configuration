@@ -9,6 +9,8 @@ M.general = {
         ["<C-l>"] = { "<Right>", "Move right" },
         ["<C-j>"] = { "<Down>", "Move down" },
         ["<C-k>"] = { "<Up>", "Move up" },
+        ["<A-j>"] = { "<Esc>:m+<CR>==gi", "Move line up" },
+        ["<A-k>"] = { "<Esc>:m-2<CR>==gi", "Move line down" }
     },
 
     n = {
@@ -38,9 +40,12 @@ M.general = {
         ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
         ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
 
+
+        ["<A-j>"] = { ":m+<CR>==gi", "Move line up" },
+        ["<A-k>"] = { ":m-2<CR>==gi", "Move line down" },
+
         -- new buffer
         ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
-        ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
         ["<leader>fm"] = {
             function()

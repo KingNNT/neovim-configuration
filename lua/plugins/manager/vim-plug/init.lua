@@ -14,6 +14,7 @@ Plug 'nvim-tree/nvim-web-devicons'                                    -- lua `fo
 Plug 'neovim/nvim-lspconfig'                                          -- neovim lsp config
 Plug('neoclide/coc.nvim', { ['branch'] = 'release' })                 -- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 
+Plug 'editorconfig/editorconfig-vim'                                  -- Editorconfig
 Plug 'hrsh7th/cmp-nvim-lsp'                                           -- A completion plugin for neovim
 Plug 'hrsh7th/cmp-buffer'                                             -- A completion plugin for neovim
 Plug 'hrsh7th/cmp-path'                                               -- A completion plugin for neovim
