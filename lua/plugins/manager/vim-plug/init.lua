@@ -1,3 +1,5 @@
+-- Should be use lazy vim, because plugin with vim plug maybe not update by me
+
 local Plug = vim.fn['plug#']
 local environment = require("configs.default").env
 
@@ -38,6 +40,7 @@ Plug 'mattn/emmet-vim'                                                -- support
 
 Plug 'numToStr/Comment.nvim'                                          -- smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
 Plug 'nvim-ts-context-commentstring'                                  -- Neovim treesitter plugin for setting the commentstring based on the cursor location in a file.
+Plug 'nvim-treesitter/nvim-tree-docs'                                 -- Code documentation built with treesitter
 
 Plug 'editorconfig/editorconfig-vim'                                  -- editorConfig plugin for Vim
 
@@ -47,8 +50,6 @@ Plug 'vim-test/vim-test'                                              -- run you
 
 Plug 'lukas-reineke/indent-blankline.nvim'                            -- Indentlines
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })     -- Syntax highlighting
-
-Plug 'jparise/vim-graphql'                                            -- a Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 
 Plug 'puremourning/vimspector'                                        -- a multi-language debugging system for Vim
 
@@ -62,5 +63,6 @@ Plug 'kristijanhusak/vim-dadbod-ui'                                   -- simple 
 
 Plug('nvimdev/dashboard-nvim', { ['event'] = 'VimEnter' })            -- vim dashboard
 
+Plug('folke/which-key.nvim', { ['event'] = 'VeryLazy' })              -- Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.
 
 vim.call('plug#end')

@@ -133,10 +133,6 @@ local plugins = {
         lazy = true,
     },
     {
-        'nvim-ts-context-commentstring',
-        lazy = true,
-    },
-    {
         'vim-test/vim-test',
         lazy = true,
     },
@@ -149,11 +145,8 @@ local plugins = {
         build = ':TSUpdate',
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
+            'nvim-treesitter/nvim-tree-docs'
         },
-        lazy = true,
-    },
-    {
-        'jparise/vim-graphql',
         lazy = true,
     },
     {
@@ -185,6 +178,19 @@ local plugins = {
         event = 'VimEnter',
         dependencies = { { 'nvim-tree/nvim-web-devicons' } },
         lazy = true,
+    },
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
     }
 }
 
