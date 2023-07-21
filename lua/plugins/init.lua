@@ -16,6 +16,7 @@ local core_conf_files = {
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
+    "neogen.lua",
     "night-owl.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
@@ -27,6 +28,7 @@ local core_conf_files = {
     "vim-dadbod-ui.vim",
     "vim-test.vim",
     "vimspector.vim",
+    "which-key.lua"
 }
 
 -- source all the config files
