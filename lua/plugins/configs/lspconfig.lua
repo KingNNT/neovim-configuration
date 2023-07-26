@@ -41,10 +41,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 lspconfig.phpactor.setup {
-  cmd = { "phpactor", "language-server" },
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 }
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.volar.setup {}
+lspconfig.volar.setup {
+  filetypes = { "vue" },
+}
