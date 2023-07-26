@@ -1,14 +1,6 @@
-local env = require "core.enviroment"
-local const = require "core.constant"
-
-if env.plug_manager == const.plug_manager_vim_plug then
-    require("plugins.manager.vim-plug")
-elseif env.plug_manager == const.plug_manager_lazy then
-    require("plugins.manager.lazy")
-end
+require("plugins.manager.lazy")
 
 local core_conf_files = {
-    "coc.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
     "emmet-vim.lua",
@@ -16,15 +8,16 @@ local core_conf_files = {
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
+    "mason.lua",
     "neogen.lua",
-    "night-owl.lua",
+    "nvim-autopairs.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
     "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",
     "toggleterm.lua",
-    -- "tokyonight.lua",
+    "tokyonight.lua",
     "vim-dadbod-ui.vim",
     "vim-test.vim",
     "vimspector.vim",

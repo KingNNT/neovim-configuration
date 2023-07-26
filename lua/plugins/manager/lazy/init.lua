@@ -10,21 +10,13 @@ local plugins = {
         priority = 990
     },
     {
-        "oxfist/night-owl.nvim",
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 980,
         config = function()
-            vim.cmd.colorscheme("night-owl")
+            vim.cmd.colorscheme("tokyonight")
         end,
     },
-    -- {
-    --     "folke/tokyonight.nvim",
-    --     lazy = false,
-    --     priority = 980,
-    --     config = function()
-    --         vim.cmd.colorscheme("tokyonight")
-    --     end,
-    -- },
     {
         "nvim-tree/nvim-web-devicons",
         lazy = false,
@@ -77,9 +69,16 @@ local plugins = {
         lazy = true,
     },
     {
-        "neoclide/coc.nvim",
-        branch = 'release',
-        lazy = false,
+        "williamboman/mason.nvim",
+        lazy = true,
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "williamboman/mason.nvim"
+        },
+        lazy = true,
     },
     {
         "hrsh7th/nvim-cmp",
