@@ -24,6 +24,24 @@
 
 - It is just a simple neovim config
 
+
+## Install
+```
+git clone https://github.com/KingNNT/neovim-configuration ~/.config/nvim --depth 1 && nvim
+
+```
+
+## Uninstall
+
+- ***Linux / Macos (unix)***
+
+```
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+
+```
+
+
 ## Plugins list
 <table>
   <thead>
@@ -89,15 +107,6 @@
     </tr>
     <tr>
       <td>6</td>
-      <td>NeoVim LSP configuration (build-in)</td>
-      <td>
-        <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a>
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>7</td>
       <td>Autocompletion</td>
       <td>
         <a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a>
@@ -106,7 +115,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>7</td>
       <td>Neovim statusline</td>
       <td>
         <a href="https://github.com/preservim/tagbar">tagbar</a>
@@ -115,7 +124,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>9</td>
+      <td>8</td>
       <td>File explorer tree</td>
       <td>
         <a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree.lua</a>
@@ -124,7 +133,7 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">10</td>
+      <td rowspan="2">9</td>
       <td rowspan="2">File searching, previewing image and text files and more with</td>
       <td>
         <a href="https://github.com/nvim-telescope/telescope.nvim">telescope.nvim</a>
@@ -140,7 +149,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>10</td>
       <td>A neovim lua plugin to help easily manage multiple terminal windows</td>
       <td>
         <a href="https://github.com/akinsho/toggleterm.nvim">toggleterm.nvim</a>
@@ -149,7 +158,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>11</td>
       <td></td>
       <td>
         <a href="https://github.com/windwp/nvim-autopairs">nvim-autopairs</a>
@@ -159,7 +168,7 @@
     </tr>
     </tr>
     <tr>
-      <td>13</td>
+      <td>12</td>
       <td></td>
       <td>
         <a href="https://github.com/mattn/emmet-vim">emmet-vim</a>
@@ -168,7 +177,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>13</td>
       <td>Support fast and smart comment</td>
       <td>
         <a href="https://github.com/numToStr/Comment.nvim">Comment.nvim</a>
@@ -186,7 +195,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>14</td>
       <td>Support run test</td>
       <td>
         <a href="https://github.com/vim-test/vim-test">vim-test</a>
@@ -195,7 +204,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>17</td>
+      <td>15</td>
       <td></td>
       <td>
         <a href="https://github.com/lukas-reineke/indent-blankline.nvim">indent-blankline.nvim</a>
@@ -204,7 +213,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>18</td>
+      <td>16</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a>
@@ -213,7 +222,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>19</td>
+      <td>17</td>
       <td></td>
       <td>
         <a href="https://github.com/puremourning/vimspector">vimspector</a>
@@ -222,7 +231,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>20</td>
+      <td>18</td>
       <td></td>
       <td>
         <a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a>
@@ -231,7 +240,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>21</td>
+      <td>19</td>
       <td></td>
       <td>
         <a href="https://github.com/lewis6991/gitsigns.nvim">gitsigns.nvim</a>
@@ -240,7 +249,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>22</td>
+      <td>20</td>
       <td></td>
       <td>
         <a href="https://github.com/wakatime/vim-wakatime">vim-wakatime</a>
@@ -249,7 +258,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>22</td>
+      <td>21</td>
       <td></td>
       <td>
         <a href="https://github.com/tpope/vim-dadbod">vim-dadbod</a>
