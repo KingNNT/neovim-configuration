@@ -45,8 +45,17 @@ lspconfig.phpactor.setup {
   root_dir = util.root_pattern("composer.json", ".git")
 }
 lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
-lspconfig.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+lspconfig.tsserver.setup {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+  end,
+
 }
-lspconfig.eslint.setup {}
+lspconfig.volar.setup {
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+  end,
+
+}
+lspconfig["null-ls"].setup {}
