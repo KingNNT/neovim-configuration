@@ -3,14 +3,15 @@ require("plugins.manager.lazy")
 local core_conf_files = {
     "Comment.lua",
     "dashboard-nvim.lua",
-    "emmet-vim.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
     "mason.lua",
     "neogen.lua",
+    "null-ls.lua",
     "nvim-autopairs.lua",
+    "nvim-cmp.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
     "nvim-web-devicons.lua",
@@ -21,7 +22,6 @@ local core_conf_files = {
     "tokyonight.lua",
     "vim-dadbod-ui.vim",
     "vim-test.vim",
-    "vimspector.vim",
     "which-key.lua"
 }
 

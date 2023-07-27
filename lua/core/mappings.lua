@@ -36,16 +36,6 @@ M.general = {
 
         ["<A-j>"] = { ":m+<CR>==", "Move line up" },
         ["<A-k>"] = { ":m-2<CR>==", "Move line down" },
-
-        -- new buffer
-        ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
-
-        ["<leader>fm"] = {
-            function()
-                vim.lsp.buf.format { async = true }
-            end,
-            "LSP formatting",
-        },
     },
 
     t = {

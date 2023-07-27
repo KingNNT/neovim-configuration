@@ -47,5 +47,6 @@ lspconfig.phpactor.setup {
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.volar.setup {
-  filetypes = { "vue" },
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
 }
+lspconfig.eslint.setup {}
