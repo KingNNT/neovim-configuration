@@ -127,11 +127,11 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        'mattn/emmet-vim',
-    },
-    {
         'numToStr/Comment.nvim',
         lazy = true,
+    },
+    {
+        'folke/todo-comments.nvim'
     },
     {
         'vim-test/vim-test',
@@ -150,14 +150,12 @@ local plugins = {
         },
         lazy = true,
     },
+
     {
+        -- A better annotation generator. Supports multiple languages and annotation conventions.
         "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter",
         config = true,
-    },
-    {
-        'puremourning/vimspector',
-        lazy = true,
     },
     {
         'tpope/vim-fugitive',
@@ -169,6 +167,7 @@ local plugins = {
         dependencies = { { 'tpope/vim-fugitive' } }
     },
     {
+        -- Vim plugin for automatic time tracking and metrics generated from your programming activity.
         'wakatime/vim-wakatime',
     },
     {
@@ -192,11 +191,6 @@ local plugins = {
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
     }
 }
 
