@@ -16,6 +16,7 @@ local core_conf_files = {
     "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",
+    "todo-comments.lua",
     "toggleterm.lua",
     "tokyonight.lua",
     "vim-dadbod-ui.vim",
