@@ -8,6 +8,7 @@ local core_conf_files = {
     "lspconfig.lua",
     "lualine.lua",
     "mason.lua",
+    "mini.lua",
     "neogen.lua",
     "null-ls.lua",
     "nvim-autopairs.lua",
