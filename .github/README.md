@@ -72,20 +72,13 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">3</td>
-      <td rowspan="2">Theme</td>
-      <td rowspan="1">
-        <a href="https://github.com/oxfist/night-owl.nvim">night-owl</a>
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan="1">
+      <td>3</td>
+      <td>Theme</td>
+      <td>
         <a href="https://github.com/folke/tokyonight.nvim">tokyonight.nvim</a>
       </td>
       <td></td>
-      <td>Default: disabled</td>
+      <td></td>
     </tr>
     <tr>
       <td>4</td>
@@ -106,7 +99,32 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>6</td>
+      <td rowspan="3">6</td>
+      <td rowspan="3">Language server</td>
+      <td rowspan="1">
+        <a href="https://github.com/williamboman/mason.nvim">mason.nvim</a>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tr>
+      <tr>
+      <td>
+        <a href="williamboman/mason-lspconfig.nvim">mason-lspconfig.nvim</a>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tr>
+      <tr>
+      <td>
+        <a href="jose-elias-alvarez/null-ls.nvim">null-ls.nvim</a>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
       <td>Autocompletion</td>
       <td>
         <a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a>
@@ -115,25 +133,61 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>Neovim statusline</td>
+      <td>8</td>
+      <td></td>
       <td>
-        <a href="https://github.com/preservim/tagbar">tagbar</a>
+        <a href="https://github.com/nvim-lualine/lualine.nvim">lualine.nvim</a>
+      </td>
+      <td>A blazing fast and easy to configure neovim statusline plugin written in pure lua.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>EditorConfig plugin for Vim</td>
+      <td>
+        <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a>
       </td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>8</td>
-      <td>File explorer tree</td>
+      <td>10</td>
+      <td></td>
       <td>
         <a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree.lua</a>
       </td>
-      <td></td>
+      <td>A file explorer tree for neovim written in lua</td>
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">9</td>
+      <td>11</td>
+      <td></td>
+      <td>
+        <a href="https://github.com/preservim/tagbar">tagbar</a>
+      </td>
+      <td>Vim plugin that displays tags in a window, ordered by scope</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td></td>
+      <td>
+        <a href="https://github.com/echasnovski/mini.nvim">mini.nvim</a>
+      </td>
+      <td>Library of 30+ independent Lua modules improving overall Neovim (version 0.7 and higher) experience with minimal effort</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td></td>
+      <td>
+        <a href="https://github.com/folke/flash.nvim">flash.nvim</a>
+      </td>
+      <td>Navigate your code with search labels, enhanced character motions and Treesitter integration</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2">14</td>
       <td rowspan="2">File searching, previewing image and text files and more with</td>
       <td>
         <a href="https://github.com/nvim-telescope/telescope.nvim">telescope.nvim</a>
@@ -149,16 +203,16 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>10</td>
-      <td>A neovim lua plugin to help easily manage multiple terminal windows</td>
+      <td>15</td>
+      <td></td>
       <td>
         <a href="https://github.com/akinsho/toggleterm.nvim">toggleterm.nvim</a>
       </td>
-      <td></td>
+      <td>A neovim lua plugin to help easily manage multiple terminal windows</td>
       <td></td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>16</td>
       <td></td>
       <td>
         <a href="https://github.com/windwp/nvim-autopairs">nvim-autopairs</a>
@@ -168,26 +222,15 @@ rm -rf ~/.local/share/nvim
     </tr>
     </tr>
     <tr>
-      <td>12</td>
-      <td></td>
-      <td>
-        <a href="https://github.com/mattn/emmet-vim">emmet-vim</a>
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>Support fast and smart comment</td>
-      <td>
+      <td rowspan="3">17</td>
+      <td rowspan="3">Support comment</td>
+      <td rowspan="1">
         <a href="https://github.com/numToStr/Comment.nvim">Comment.nvim</a>
       </td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>15</td>
-      <td>Support smart comment for typescript</td>
       <td>
         <a href="https://github.com/JoosepAlviste/nvim-ts-context-commentstring">nvim-ts-context-commentstring</a>
       </td>
@@ -195,7 +238,14 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>
+        <a href="folke/todo-comments.nvim">todo-comments.nvim</a>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18</td>
       <td>Support run test</td>
       <td>
         <a href="https://github.com/vim-test/vim-test">vim-test</a>
@@ -204,7 +254,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>19</td>
       <td></td>
       <td>
         <a href="https://github.com/lukas-reineke/indent-blankline.nvim">indent-blankline.nvim</a>
@@ -213,7 +263,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>20</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a>
@@ -222,26 +272,24 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>17</td>
+      <td>21</td>
       <td></td>
       <td>
-        <a href="https://github.com/puremourning/vimspector">vimspector</a>
+        <a href="https://github.com/danymat/neogen">neogen</a>
       </td>
-      <td>vimspector - A multi-language debugging system for Vim</td>
+      <td>A better annotation generator. Supports multiple languages and annotation conventions.</td>
       <td></td>
     </tr>
     <tr>
-      <td>18</td>
-      <td></td>
-      <td>
+      <td rowspan="2">22</td>
+      <td rowspan="2">Git support</td>
+      <td rowspan="1">
         <a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a>
       </td>
       <td>fugitive.vim: A Git wrapper so awesome, it should be illegal</td>
       <td></td>
     </tr>
     <tr>
-      <td>19</td>
-      <td></td>
       <td>
         <a href="https://github.com/lewis6991/gitsigns.nvim">gitsigns.nvim</a>
       </td>
@@ -249,7 +297,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>20</td>
+      <td>23</td>
       <td></td>
       <td>
         <a href="https://github.com/wakatime/vim-wakatime">vim-wakatime</a>
@@ -258,17 +306,15 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>21</td>
-      <td></td>
-      <td>
+      <td rowspan="2">24</td>
+      <td rowspan="2">Support Database Management</td>
+      <td rowspan="1">
         <a href="https://github.com/tpope/vim-dadbod">vim-dadbod</a>
       </td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>22</td>
-      <td></td>
       <td>
         <a href="https://github.com/kristijanhusak/vim-dadbod-ui">vim-dadbod-ui</a>
       </td>
@@ -276,12 +322,21 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>23</td>
+      <td>25</td>
       <td></td>
       <td>
         <a href="https://github.com/nvimdev/dashboard-nvim">dashboard-nvim</a>
       </td>
       <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td></td>
+      <td>
+        <a href="https://github.com/folke/which-key.nvim">which-key.nvim</a>
+      </td>
+      <td>Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.</td>
       <td></td>
     </tr>
   </tbody>
