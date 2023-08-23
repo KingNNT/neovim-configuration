@@ -4,10 +4,15 @@ on:
   push:
     branches: [master]
     paths:
+      - .github/wiki/**
+      - .github/workflows/publish-wiki.yml
+  pull_request:
+    branches: [master]
+    paths:
       - wiki/**
       - .github/workflows/publish-wiki.yml
 concurrency:
-  group: publish-wiki
+  group: ${{ github.workflow }}
   cancel-in-progress: true
 permissions:
   contents: write
