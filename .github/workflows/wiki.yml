@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [master]
     paths:
-      - wiki/**
+      - .wiki/**
       - .github/workflows/publish-wiki.yml
 concurrency:
   group: ${{ github.workflow }}
