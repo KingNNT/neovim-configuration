@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
     paths:
-      - .github/wiki/**
+      - .wiki/**
       - .github/workflows/publish-wiki.yml
   pull_request:
     branches: [master]
