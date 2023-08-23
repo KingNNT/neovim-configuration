@@ -25,4 +25,4 @@ sudo apt-get install -y universal-ctags
 sudo apt-get install ripgrep
 ```
 
-- Open NeoVim and run `:PlugInstall`
+- Open NeoVim and run `:Lazy` and select `Install`
