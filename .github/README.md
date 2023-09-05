@@ -143,6 +143,15 @@ rm -rf ~/.local/share/nvim
     </tr>
     <tr>
       <td>9</td>
+      <td></td>
+      <td>
+        <a href="https://github.com/akinsho/bufferline.nvim">bufferline.nvim</a>
+      </td>
+      <td>A snazzy bufferline for Neovim</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10</td>
       <td>EditorConfig plugin for Vim</td>
       <td>
         <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a>
@@ -151,7 +160,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree.lua</a>
@@ -160,7 +169,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>12</td>
       <td></td>
       <td>
         <a href="https://github.com/preservim/tagbar">tagbar</a>
@@ -169,7 +178,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>13</td>
       <td></td>
       <td>
         <a href="https://github.com/echasnovski/mini.nvim">mini.nvim</a>
@@ -178,7 +187,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>14</td>
       <td></td>
       <td>
         <a href="https://github.com/folke/flash.nvim">flash.nvim</a>
@@ -187,7 +196,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">14</td>
+      <td rowspan="2">15</td>
       <td rowspan="2">File searching, previewing image and text files and more with</td>
       <td>
         <a href="https://github.com/nvim-telescope/telescope.nvim">telescope.nvim</a>
@@ -203,7 +212,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>16</td>
       <td></td>
       <td>
         <a href="https://github.com/akinsho/toggleterm.nvim">toggleterm.nvim</a>
@@ -212,7 +221,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>17</td>
       <td></td>
       <td>
         <a href="https://github.com/windwp/nvim-autopairs">nvim-autopairs</a>
@@ -222,7 +231,7 @@ rm -rf ~/.local/share/nvim
     </tr>
     </tr>
     <tr>
-      <td rowspan="3">17</td>
+      <td rowspan="3">18</td>
       <td rowspan="3">Support comment</td>
       <td rowspan="1">
         <a href="https://github.com/numToStr/Comment.nvim">Comment.nvim</a>
@@ -245,7 +254,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>18</td>
+      <td>19</td>
       <td>Support run test</td>
       <td>
         <a href="https://github.com/vim-test/vim-test">vim-test</a>
@@ -254,7 +263,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>19</td>
+      <td>20</td>
       <td></td>
       <td>
         <a href="https://github.com/lukas-reineke/indent-blankline.nvim">indent-blankline.nvim</a>
@@ -263,7 +272,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>20</td>
+      <td>21</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a>
@@ -272,7 +281,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>21</td>
+      <td>22</td>
       <td></td>
       <td>
         <a href="https://github.com/danymat/neogen">neogen</a>
@@ -281,7 +290,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">22</td>
+      <td rowspan="2">23</td>
       <td rowspan="2">Git support</td>
       <td rowspan="1">
         <a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a>
@@ -297,7 +306,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>23</td>
+      <td>24</td>
       <td></td>
       <td>
         <a href="https://github.com/wakatime/vim-wakatime">vim-wakatime</a>
@@ -306,7 +315,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">24</td>
+      <td rowspan="2">25</td>
       <td rowspan="2">Support Database Management</td>
       <td rowspan="1">
         <a href="https://github.com/tpope/vim-dadbod">vim-dadbod</a>
@@ -322,7 +331,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>25</td>
+      <td>26</td>
       <td></td>
       <td>
         <a href="https://github.com/nvimdev/dashboard-nvim">dashboard-nvim</a>
@@ -331,7 +340,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>26</td>
+      <td>27</td>
       <td></td>
       <td>
         <a href="https://github.com/folke/which-key.nvim">which-key.nvim</a>
