@@ -1,6 +1,7 @@
 require("plugins.manager.lazy")
 
 local core_conf_files = {
+    "bufferline.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
     "gitsigns.lua",
@@ -15,6 +16,7 @@ local core_conf_files = {
     "nvim-cmp.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
+    "nvim-ts-context-commentstring.lua",
     "nvim-web-devicons.lua",
     "tagbar.vim",
     "telescope.lua",

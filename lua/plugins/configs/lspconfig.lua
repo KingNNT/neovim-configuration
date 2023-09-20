@@ -52,7 +52,7 @@ lspconfig.tsserver.setup {
 
 }
 lspconfig.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
+  filetypes = { 'typescript', 'javascript', 'vue', 'json' },
   on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
   end,
