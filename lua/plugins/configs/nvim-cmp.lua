@@ -101,3 +101,6 @@ require('lspconfig')['tsserver'].setup {
 require('lspconfig')['volar'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['prismals'].setup {
+    capabilities = capabilities
+}

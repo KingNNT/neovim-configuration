@@ -49,13 +49,12 @@ lspconfig.tsserver.setup {
   on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
   end,
-
 }
 lspconfig.volar.setup {
   filetypes = { 'typescript', 'javascript', 'vue', 'json' },
   on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
   end,
-
 }
 lspconfig["null-ls"].setup {}
+lspconfig.prismals.setup {}
