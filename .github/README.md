@@ -118,7 +118,7 @@ rm -rf ~/.local/share/nvim
     </tr>
       <tr>
       <td>
-        <a href="jose-elias-alvarez/null-ls.nvim">null-ls.nvim</a>
+        <a href="jose-elias-alvarez/null-ls.nvim" style="text-decoration: line-through;">null-ls.nvim</a>
       </td>
       <td></td>
       <td></td>
