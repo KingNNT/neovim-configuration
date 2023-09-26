@@ -58,3 +58,4 @@ lspconfig.volar.setup {
 }
 -- lspconfig["null-ls"].setup {}
 lspconfig.prismals.setup {}
+lspconfig.tailwindcss.setup {}
