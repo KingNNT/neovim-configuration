@@ -46,7 +46,6 @@ rm -rf ~/.local/share/nvim
 <table>
   <thead>
     <tr>
-      <th colspan="1">Order</th>
       <th colspan="1">Feature</th>
       <th colspan="2">Plugin</th>
       <th colspan="1">Note</th>
@@ -54,7 +53,6 @@ rm -rf ~/.local/share/nvim
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
       <td>Support function neovim </td>
       <td>
         <a href="https://github.com/nvim-lua/plenary.nvim">plenary.nvim</a>
@@ -63,7 +61,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>2</td>
       <td>Default setting neovim</td>
       <td>
         <a href="https://github.com/tpope/vim-sensible">vim-sensible</a>
@@ -72,7 +69,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>3</td>
       <td>Theme</td>
       <td>
         <a href="https://github.com/folke/tokyonight.nvim">tokyonight.nvim</a>
@@ -81,7 +77,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>4</td>
       <td>Icon fonts</td>
       <td>
         <a href="https://github.com/nvim-tree/nvim-web-devicons"> nvim-web-devicons </a>
@@ -90,7 +85,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>5</td>
       <td>NeoVim LSP configuration (not build-in)</td>
       <td>
         <a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a>
@@ -99,8 +93,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="3">6</td>
-      <td rowspan="3">Language server</td>
+      <td rowspan="2">Language server</td>
       <td rowspan="1">
         <a href="https://github.com/williamboman/mason.nvim">mason.nvim</a>
       </td>
@@ -115,16 +108,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
       <td></td>
     </tr>
-    </tr>
-      <tr>
-      <td>
-        <a href="jose-elias-alvarez/null-ls.nvim" style="text-decoration: line-through;">null-ls.nvim</a>
-      </td>
-      <td></td>
-      <td></td>
-    </tr>
     <tr>
-      <td>7</td>
       <td>Autocompletion</td>
       <td>
         <a href="https://github.com/hrsh7th/nvim-cmp">nvim-cmp</a>
@@ -133,7 +117,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>8</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-lualine/lualine.nvim">lualine.nvim</a>
@@ -142,7 +125,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>9</td>
       <td></td>
       <td>
         <a href="https://github.com/akinsho/bufferline.nvim">bufferline.nvim</a>
@@ -151,7 +133,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>10</td>
       <td>EditorConfig plugin for Vim</td>
       <td>
         <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a>
@@ -160,7 +141,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>11</td>
       <td></td>
       <td>
         <a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree.lua</a>
@@ -169,7 +149,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>12</td>
       <td></td>
       <td>
         <a href="https://github.com/preservim/tagbar">tagbar</a>
@@ -178,7 +157,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>13</td>
       <td></td>
       <td>
         <a href="https://github.com/echasnovski/mini.nvim">mini.nvim</a>
@@ -187,7 +165,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>14</td>
       <td></td>
       <td>
         <a href="https://github.com/folke/flash.nvim">flash.nvim</a>
@@ -196,7 +173,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">15</td>
       <td rowspan="2">File searching, previewing image and text files and more with</td>
       <td>
         <a href="https://github.com/nvim-telescope/telescope.nvim">telescope.nvim</a>
@@ -212,7 +188,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>16</td>
       <td></td>
       <td>
         <a href="https://github.com/akinsho/toggleterm.nvim">toggleterm.nvim</a>
@@ -221,7 +196,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>17</td>
       <td></td>
       <td>
         <a href="https://github.com/windwp/nvim-autopairs">nvim-autopairs</a>
@@ -231,7 +205,6 @@ rm -rf ~/.local/share/nvim
     </tr>
     </tr>
     <tr>
-      <td rowspan="3">18</td>
       <td rowspan="3">Support comment</td>
       <td rowspan="1">
         <a href="https://github.com/numToStr/Comment.nvim">Comment.nvim</a>
@@ -254,7 +227,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>19</td>
       <td>Support run test</td>
       <td>
         <a href="https://github.com/vim-test/vim-test">vim-test</a>
@@ -263,8 +235,7 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>20</td>
-      <td></td>
+      <td rowspan="2"></td>
       <td>
         <a href="https://github.com/lukas-reineke/indent-blankline.nvim">indent-blankline.nvim</a>
       </td>
@@ -272,16 +243,21 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>21</td>
+      <td>
+        <a href="https://github.com/lukas-reineke/indent-blankline.nvim">rainbow-delimiters.nvim</a>
+      </td>
+      <td>Rainbow delimiters for Neovim with Tree-sitter</td>
+      <td></td>
+    </tr>
+    <tr>
       <td></td>
       <td>
-        <a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a>
+        <a href="https://github.com/HiPhish/rainbow-delimiters.nvim">nvim-treesitter</a>
       </td>
       <td>Nvim Treesitter configurations and abstraction layer</td>
       <td></td>
     </tr>
     <tr>
-      <td>22</td>
       <td></td>
       <td>
         <a href="https://github.com/danymat/neogen">neogen</a>
@@ -290,7 +266,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">23</td>
       <td rowspan="2">Git support</td>
       <td rowspan="1">
         <a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a>
@@ -306,7 +281,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>24</td>
       <td></td>
       <td>
         <a href="https://github.com/wakatime/vim-wakatime">vim-wakatime</a>
@@ -315,7 +289,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td rowspan="2">25</td>
       <td rowspan="2">Support Database Management</td>
       <td rowspan="1">
         <a href="https://github.com/tpope/vim-dadbod">vim-dadbod</a>
@@ -331,7 +304,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>26</td>
       <td></td>
       <td>
         <a href="https://github.com/nvimdev/dashboard-nvim">dashboard-nvim</a>
@@ -340,7 +312,6 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
-      <td>27</td>
       <td></td>
       <td>
         <a href="https://github.com/folke/which-key.nvim">which-key.nvim</a>

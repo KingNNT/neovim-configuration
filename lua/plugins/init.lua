@@ -11,7 +11,6 @@ local core_conf_files = {
     "mason.lua",
     "mini.lua",
     "neogen.lua",
-    -- "null-ls.lua",
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
     "nvim-tree.lua",

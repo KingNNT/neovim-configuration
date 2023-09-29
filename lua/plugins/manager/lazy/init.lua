@@ -80,13 +80,6 @@ local plugins = {
         },
         lazy = true,
     },
-    -- {
-    --     -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-    --     'jose-elias-alvarez/null-ls.nvim',
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim"
-    --     }
-    -- },
     {
         "hrsh7th/nvim-cmp",
         dependencies = {

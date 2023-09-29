@@ -56,7 +56,6 @@ lspconfig.volar.setup {
     client.server_capabilities.documentFormattingProvider = false
   end,
 }
--- lspconfig["null-ls"].setup {}
 lspconfig.prismals.setup {}
 lspconfig.tailwindcss.setup {}
 lspconfig.cssls.setup {}
