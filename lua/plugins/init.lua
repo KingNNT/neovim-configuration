@@ -18,6 +18,7 @@ local core_conf_files = {
     "nvim-treesitter.lua",
     "nvim-ts-context-commentstring.lua",
     "nvim-web-devicons.lua",
+    "rainbow-delimiters.lua",
     "tagbar.vim",
     "telescope.lua",
     "todo-comments.lua",

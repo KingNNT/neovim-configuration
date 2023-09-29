@@ -24,7 +24,6 @@ end)
 vim.g.rainbow_delimiters = { highlight = highlight }
 
 require("ibl").setup {
-    indent = { highlight = highlight },
     scope = { highlight = highlight },
     exclude = {
         filetypes = {

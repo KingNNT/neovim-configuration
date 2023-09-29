@@ -196,6 +196,10 @@ local plugins = {
         lazy = true,
     },
     {
+        'HiPhish/rainbow-delimiters.nvim',
+        lazy = true,
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
         dependencies = {
