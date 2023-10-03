@@ -45,17 +45,32 @@ lspconfig.phpactor.setup {
   root_dir = util.root_pattern("composer.json", ".git")
 }
 lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-  end,
-}
+lspconfig.tsserver.setup {}
+
+local function get_typescript_server_path(root_dir)
+  local global_ts = '/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib'
+  -- Alternative location if installed as root:
+  -- local global_ts = '/usr/local/lib/node_modules/typescript/lib'
+  local found_ts = ''
+  local function check_dir(path)
+    found_ts = util.path.join(path, 'node_modules', 'typescript', 'lib')
+    if util.path.exists(found_ts) then
+      return path
+    end
+  end
+  if util.search_ancestors(root_dir, check_dir) then
+    return found_ts
+  else
+    return global_ts
+  end
+end
 lspconfig.volar.setup {
   filetypes = { 'typescript', 'javascript', 'vue', 'json' },
-  on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
+  on_new_config = function(new_config, new_root_dir)
+    new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
   end,
 }
+
 lspconfig.prismals.setup {}
 lspconfig.tailwindcss.setup {}
 lspconfig.cssls.setup {}
