@@ -197,7 +197,6 @@ local plugins = {
         build = ':TSUpdate',
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
-            'nvim-treesitter/nvim-tree-docs'
         },
         lazy = true,
     },
