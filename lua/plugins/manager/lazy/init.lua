@@ -93,6 +93,10 @@ local plugins = {
         },
     },
     {
+        "mhartington/formatter.nvim",
+        lazy = true,
+    },
+    {
         "nvim-lualine/lualine.nvim",
         lazy = true,
     },

@@ -4,6 +4,7 @@ local core_conf_files = {
     "bufferline.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
+    "formatter.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
