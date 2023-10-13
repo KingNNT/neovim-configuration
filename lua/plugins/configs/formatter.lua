@@ -3,16 +3,23 @@ local util = require "formatter.util"
 
 local prettier = function()
     return {
-        exe = "prettier",
-        args = { "--stdin-filepath", vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
+        exe = "npx prettier",
+        args = {
+            "--stdin-filepath", vim.fn.shellescape(vim.api.nvim_buf_get_name(0)),
+            "--single-quote"
+        },
         stdin = true,
     }
 end
 
 local eslint = function()
     return {
-        exe = "eslint",
-        args = { "--stdin", "--stdin-filename", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--fix-to-stdout" },
+        exe = "npx eslint",
+        args = {
+            "--stdin",
+            "--stdin-filename", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--fix-to-stdout"
+        },
         stdin = true
     }
 end
@@ -55,19 +62,7 @@ require("formatter").setup {
             end
         },
         vue = {
-            function()
-                return {
-                    exe = "npx prettier",
-                    args = {
-                        "--stdin-filepath", vim.api.nvim_buf_get_name(0),
-                        "--single-quote",
-                        "--parser", "vue",
-                        "--loglevel", "silent"
-                    },
-                    stdin = true,
-                    try_node_modules = true,
-                }
-            end
+            prettier
         },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
