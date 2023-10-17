@@ -44,7 +44,13 @@ lspconfig.phpactor.setup {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 }
-lspconfig.pyright.setup {}
+lspconfig.pyright.setup {
+  before_init = function(params)
+    params.processId = vim.NIL
+  end,
+  cmd = require 'lspcontainers'.command('pyright'),
+  root_dir = require 'lspconfig/util'.root_pattern(".git", vim.fn.getcwd()),
+}
 lspconfig.tsserver.setup {}
 
 local function get_typescript_server_path(root_dir)

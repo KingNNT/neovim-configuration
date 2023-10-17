@@ -69,6 +69,10 @@ local plugins = {
         lazy = true,
     },
     {
+        "lspcontainers/lspcontainers.nvim",
+        lazy = true,
+    },
+    {
         "williamboman/mason.nvim",
         lazy = true,
     },
