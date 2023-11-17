@@ -69,6 +69,10 @@ local plugins = {
         lazy = true,
     },
     {
+        "lspcontainers/lspcontainers.nvim",
+        lazy = true,
+    },
+    {
         "williamboman/mason.nvim",
         lazy = true,
     },
@@ -81,13 +85,6 @@ local plugins = {
         lazy = true,
     },
     {
-        -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-        'jose-elias-alvarez/null-ls.nvim',
-        dependencies = {
-            "nvim-lua/plenary.nvim"
-        }
-    },
-    {
         "hrsh7th/nvim-cmp",
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
@@ -98,6 +95,10 @@ local plugins = {
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip"
         },
+    },
+    {
+        "mhartington/formatter.nvim",
+        lazy = true,
     },
     {
         "nvim-lualine/lualine.nvim",
@@ -191,6 +192,12 @@ local plugins = {
     },
     {
         'lukas-reineke/indent-blankline.nvim',
+        main = "ibl",
+        opts = {},
+        lazy = true,
+    },
+    {
+        'HiPhish/rainbow-delimiters.nvim',
         lazy = true,
     },
     {
@@ -198,7 +205,6 @@ local plugins = {
         build = ':TSUpdate',
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
-            'nvim-treesitter/nvim-tree-docs'
         },
         lazy = true,
     },
