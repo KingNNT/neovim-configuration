@@ -1,7 +1,7 @@
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = {
-        'comment', 'css', 'html', 'javascript', 'lua', 'php', 'python', 'scss', 'tsx', 'typescript', 'vim', 'vue',
+        'css', 'html', 'javascript', 'lua', 'php', 'python', 'scss', 'tsx', 'typescript', 'vim', 'vue',
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -37,8 +37,4 @@ require 'nvim-treesitter.configs'.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-    context_commentstring = {
-        enable = true,
-    },
-    tree_docs = { enable = true }
 }

@@ -1,8 +1,10 @@
 require("plugins.manager.lazy")
 
 local core_conf_files = {
+    "bufferline.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
+    "formatter.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
@@ -10,12 +12,13 @@ local core_conf_files = {
     "mason.lua",
     "mini.lua",
     "neogen.lua",
-    "null-ls.lua",
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
+    "nvim-ts-context-commentstring.lua",
     "nvim-web-devicons.lua",
+    "rainbow-delimiters.lua",
     "tagbar.vim",
     "telescope.lua",
     "todo-comments.lua",

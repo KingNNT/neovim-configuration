@@ -32,5 +32,10 @@ require("neogen").setup {
                 annotation_convention = "tsdoc",
             },
         },
+        vue = {
+            template = {
+                annotation_convention = "jsdoc",
+            },
+        },
     },
 }
