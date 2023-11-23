@@ -113,6 +113,11 @@ local plugins = {
         "editorconfig/editorconfig-vim",
     },
     {
+        'kevinhwang91/nvim-ufo',
+        lazy = true,
+        dependencies = 'kevinhwang91/promise-async'
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         lazy = true,
     },
