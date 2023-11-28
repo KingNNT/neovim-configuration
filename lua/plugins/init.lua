@@ -9,6 +9,7 @@ local core_conf_files = {
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
+    "markdown-preview.vim",
     "mason.lua",
     "mini.lua",
     "neogen.lua",

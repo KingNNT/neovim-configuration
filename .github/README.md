@@ -133,6 +133,14 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
+      <td></td>
+      <td>
+        <a href="https://github.com/kevinhwang91/nvim-ufo">nvim-ufo</a>
+      </td>
+      <td>Not UFO in the sky, but an ultra fold in Neovim.</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>EditorConfig plugin for Vim</td>
       <td>
         <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a>
@@ -317,6 +325,14 @@ rm -rf ~/.local/share/nvim
         <a href="https://github.com/folke/which-key.nvim">which-key.nvim</a>
       </td>
       <td>Create key bindings that stick. WhichKey is a lua plugin for Neovim 0.5 that displays a popup with possible keybindings of the command you started typing.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a href="https://github.com/iamcco/markdown-preview.nvim">markdown-preview.nvim</a>
+      </td>
+      <td>markdown preview plugin for (neo)vim</td>
       <td></td>
     </tr>
   </tbody>
