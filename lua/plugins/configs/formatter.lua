@@ -63,6 +63,9 @@ require("formatter").setup {
         vue = {
             prettier
         },
+        typescript = {
+            prettier
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
