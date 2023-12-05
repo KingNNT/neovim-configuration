@@ -220,6 +220,11 @@ local plugins = {
         config = true,
     },
     {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        lazy = true,
+    },
+    {
         'tpope/vim-fugitive',
         lazy = true,
     },

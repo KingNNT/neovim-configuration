@@ -274,6 +274,14 @@ rm -rf ~/.local/share/nvim
       <td></td>
     </tr>
     <tr>
+      <td></td>
+      <td>
+        <a href="https://github.com/folke/trouble.nvim">trouble.nvim</a>
+      </td>
+      <td>A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.</td>
+      <td></td>
+    </tr>
+    <tr>
       <td rowspan="2">Git support</td>
       <td rowspan="1">
         <a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a>
