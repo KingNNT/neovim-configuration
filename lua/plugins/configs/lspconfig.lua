@@ -79,5 +79,7 @@ lspconfig.volar.setup {
 
 lspconfig.prismals.setup {}
 lspconfig.tailwindcss.setup {}
-lspconfig.cssls.setup {}
+lspconfig.cssls.setup {
+  filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
+}
 lspconfig.cssmodules_ls.setup {}

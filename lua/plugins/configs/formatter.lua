@@ -66,6 +66,9 @@ require("formatter").setup {
         typescript = {
             prettier
         },
+        scss = {
+            prettier
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
