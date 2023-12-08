@@ -1,6 +1,8 @@
 require("plugins.manager.lazy")
 
 local core_conf_files = {
+    "neodev.lua",
+    --
     "bufferline.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
@@ -13,6 +15,7 @@ local core_conf_files = {
     "mason.lua",
     "mini.lua",
     "neogen.lua",
+    "neotest.lua",
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
     "nvim-tree.lua",

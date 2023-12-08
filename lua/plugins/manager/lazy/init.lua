@@ -195,6 +195,17 @@ local plugins = {
     {
         'vim-test/vim-test',
     },
+    { "folke/neodev.nvim", opts = {} },
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            -- Plugin adapter
+            "haydenmeade/neotest-jest",
+            "thenbe/neotest-playwright",
+        }
+    },
     {
         'lukas-reineke/indent-blankline.nvim',
         main = "ibl",
