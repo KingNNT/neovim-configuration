@@ -69,6 +69,18 @@ require("formatter").setup {
         scss = {
             prettier
         },
+        php = {
+            function()
+                return {
+                    exe = './vendor/bin/phpcbf',
+                    args = {
+                        "--standard=PSR12",
+                        util.escape_path(util.get_current_buffer_file_path()),
+                    },
+                    stdin = false,
+                }
+            end
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
