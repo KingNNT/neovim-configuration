@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-lspconfig.phpactor.setup {
+lspconfig.intelephense.setup {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 }
