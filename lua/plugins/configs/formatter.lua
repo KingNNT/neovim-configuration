@@ -34,6 +34,9 @@ require("formatter").setup {
         vue = {
             prettier
         },
+        javascript = {
+            prettier
+        },
         typescript = {
             prettier
         },
