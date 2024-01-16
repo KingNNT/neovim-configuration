@@ -44,7 +44,9 @@ lspconfig.intelephense.setup {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 }
+
 lspconfig.pyright.setup {}
+
 lspconfig.tsserver.setup {}
 
 local function get_typescript_server_path(root_dir)
@@ -64,6 +66,7 @@ local function get_typescript_server_path(root_dir)
     return global_ts
   end
 end
+
 lspconfig.volar.setup {
   filetypes = { 'typescript', 'javascript', 'vue', 'json' },
   on_new_config = function(new_config, new_root_dir)
@@ -72,8 +75,13 @@ lspconfig.volar.setup {
 }
 
 lspconfig.prismals.setup {}
+
 lspconfig.tailwindcss.setup {}
+
 lspconfig.cssls.setup {
   filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
 }
+
 lspconfig.cssmodules_ls.setup {}
+
+lspconfig.rust_analyzer.setup {}

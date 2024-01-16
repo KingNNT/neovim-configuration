@@ -113,3 +113,6 @@ require('lspconfig')['cssls'].setup {
 require('lspconfig')['cssmodules_ls'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['rust_analyzer'].setup {
+    capabilities = capabilities
+}
