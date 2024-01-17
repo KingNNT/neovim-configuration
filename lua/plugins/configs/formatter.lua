@@ -62,6 +62,10 @@ require("formatter").setup {
                 }
             end
         },
+        rust = {
+            require("formatter.filetypes.lua").rust,
+            prettier
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
