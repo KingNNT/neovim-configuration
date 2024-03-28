@@ -31,36 +31,39 @@ require("formatter").setup {
     log_level = vim.log.levels.WARN,
     -- All formatter configurations are opt-in
     filetype = {
-        -- Formatter configurations for filetype "lua" go here
-        -- and will be executed in order
-        lua = {
-            -- "formatter.filetypes.lua" defines default configurations for the
-            -- "lua" filetype
-            require("formatter.filetypes.lua").stylua,
-
-            -- You can also define your own configuration
+        vue = {
+            prettier
+        },
+        javascript = {
+            prettier
+        },
+        typescript = {
+            prettier
+        },
+        typescriptreact = {
+            prettier
+        },
+        json = {
+            require("formatter.filetypes.lua").json,
+            prettier
+        },
+        scss = {
+            prettier
+        },
+        php = {
             function()
-                -- Supports conditional formatting
-                if util.get_current_buffer_file_name() == "special.lua" then
-                    return nil
-                end
-
-                -- Full specification of configurations is down below and in Vim help
-                -- files
                 return {
-                    exe = "stylua",
+                    exe = './vendor/bin/phpcbf',
                     args = {
-                        "--search-parent-directories",
-                        "--stdin-filepath",
+                        "--standard=PSR12",
                         util.escape_path(util.get_current_buffer_file_path()),
-                        "--",
-                        "-",
                     },
-                    stdin = true,
+                    stdin = false,
                 }
             end
         },
-        vue = {
+        rust = {
+            require("formatter.filetypes.lua").rust,
             prettier
         },
         -- Use the special "*" filetype for defining formatter configurations on

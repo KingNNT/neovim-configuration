@@ -1,6 +1,9 @@
 require("plugins.manager.lazy")
 
 local core_conf_files = {
+    "neodev.lua",
+    --
+    "aerial.lua",
     "bufferline.lua",
     "Comment.lua",
     "dashboard-nvim.lua",
@@ -9,9 +12,10 @@ local core_conf_files = {
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
+    "markdown-preview.vim",
     "mason.lua",
-    "mini.lua",
     "neogen.lua",
+    "neotest.lua",
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
     "nvim-tree.lua",
@@ -20,12 +24,9 @@ local core_conf_files = {
     "nvim-ufo.lua",
     "nvim-web-devicons.lua",
     "rainbow-delimiters.lua",
-    "tagbar.vim",
     "telescope.lua",
     "todo-comments.lua",
-    "toggleterm.lua",
     "tokyonight.lua",
-    "vim-dadbod-ui.vim",
     "vim-test.vim",
     "which-key.lua"
 }
