@@ -72,3 +72,10 @@ autocmd("BufWritePost", {
         require("plenary.reload").reload_module(module)
     end,
 })
+
+-------------------------------------- customize cmds ------------------------------------------
+vim.api.nvim_create_user_command('CopyPath', function()
+    pcall(function()
+        vim.fn.Preserve("exec 'let @+ = expand('%:p')'")
+    end)
+end, {})

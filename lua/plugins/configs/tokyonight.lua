@@ -1,6 +1,3 @@
-local const = require 'core.constant'
-local env = require 'core.enviroment'
-
 require("tokyonight").setup({
     -- your configuration comes here
     -- or leave it empty to use the default settings

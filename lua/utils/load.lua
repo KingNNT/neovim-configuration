@@ -1,16 +1,19 @@
 local M = {}
 local merge_tb = vim.tbl_deep_extend
 
+-- Load core
 M.load_core = function()
     require('core.globals')
     require('core')
 end
 
+-- Load config
 M.load_config = function()
     local config = require "configs.default"
     return config
 end
 
+-- Load key mappings
 M.load_mappings = function(section, mapping_opt)
     vim.schedule(function()
         local function set_section_map(section_values)
@@ -34,19 +37,21 @@ M.load_mappings = function(section, mapping_opt)
             end
         end
 
-        local mappings = require("configs.default").mappings
+        local core_mappings = require("configs.default").core_mappings
+
 
         if type(section) == "string" then
-            mappings[section]["plugin"] = nil
-            mappings = { mappings[section] }
+            core_mappings[section]["plugin"] = nil
+            core_mappings = { core_mappings[section] }
         end
 
-        for _, sect in pairs(mappings) do
+        for _, sect in pairs(core_mappings) do
             set_section_map(sect)
         end
     end)
 end
 
+-- Load plugin
 M.load_plugin = function()
     require('plugins')
 end
