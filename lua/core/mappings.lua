@@ -10,7 +10,9 @@ M.general = {
         ["<C-j>"] = { "<Down>", "Move down" },
         ["<C-k>"] = { "<Up>", "Move up" },
         ["<A-j>"] = { "<Esc>:m+<CR>==", "Move line up" },
-        ["<A-k>"] = { "<Esc>:m-2<CR>==", "Move line down" }
+        ["<A-k>"] = { "<Esc>:m-2<CR>==", "Move line down" },
+        ["∆"] = { "<Esc>:m+<CR>==", "Move line up" },
+        ["˚"] = { "<Esc>:m-2<CR>==", "Move line down" },
     },
 
     n = {
@@ -36,6 +38,8 @@ M.general = {
 
         ["<A-j>"] = { ":m+<CR>==", "Move line up" },
         ["<A-k>"] = { ":m-2<CR>==", "Move line down" },
+        ["∆"] = { "<Esc>:m+<CR>==", "Move line up" },
+        ["˚"] = { "<Esc>:m-2<CR>==", "Move line down" },
     },
 
     t = {
