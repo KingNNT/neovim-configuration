@@ -265,6 +265,10 @@ local plugins = {
         -- The superior project management solution for neovim.
         "ahmedkhalf/project.nvim",
         lazy = true,
+    },
+    {
+        "NvChad/nvim-colorizer.lua",
+        lazy = true
     }
 }
 

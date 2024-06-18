@@ -18,6 +18,7 @@ local core_conf_files = {
     "neotest.lua",
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
+    "nvim-colorizer.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
     "nvim-ts-context-commentstring.lua",
