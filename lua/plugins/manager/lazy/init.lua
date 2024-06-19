@@ -267,7 +267,13 @@ local plugins = {
         lazy = true,
     },
     {
+        -- Color for hex code
         "NvChad/nvim-colorizer.lua",
+        lazy = true
+    },
+    {
+        -- Lightweight yet powerful formatter plugin for Neovim
+        "stevearc/conform.nvim",
         lazy = true
     }
 }

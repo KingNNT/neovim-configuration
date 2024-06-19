@@ -6,6 +6,7 @@ local core_conf_files = {
     "aerial.lua",
     "bufferline.lua",
     "Comment.lua",
+    "conform.lua",
     "dashboard-nvim.lua",
     "formatter.lua",
     "gitsigns.lua",

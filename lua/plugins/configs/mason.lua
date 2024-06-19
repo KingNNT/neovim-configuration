@@ -4,15 +4,26 @@ require("mason-lspconfig").setup {
     -- This setting has no relation with the `automatic_installation` setting.
     ---@type string[]
     ensure_installed = {
-        "intelephense",
-        "pyright",
-        "tsserver",
-        "volar",
-        "prismals",
-        "tailwindcss",
+        "bashls",
+        "cmake",
         "cssls",
         "cssmodules_ls",
-        "rust_analyzer"
+        "dockerls",
+        "docker_compose_language_service",
+        "eslint",
+        "emmet_language_server",
+        "graphql",
+        "jsonls",
+        "tsserver",
+        "nginx_language_server",
+        "intelephense",
+        "prismals",
+        "pyright",
+        "rust_analyzer",
+        "sqlls",
+        "tailwindcss",
+        "terraformls",
+        "volar",
     },
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.
