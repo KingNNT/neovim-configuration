@@ -1,6 +1,12 @@
 require("conform").setup({
     formatters_by_ft = {
-        javascript = { { "prettierd", "prettier" } },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
         python = function(bufnr)
             if require("conform").get_formatter_info("ruff_format", bufnr).available then
                 return { "ruff_format" }
