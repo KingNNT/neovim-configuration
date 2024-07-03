@@ -15,6 +15,7 @@ local core_conf_files = {
     "lualine.lua",
     "markdown-preview.vim",
     "mason.lua",
+    "mini.lua",
     "neogen.lua",
     "neotest.lua",
     "nvim-autopairs.lua",

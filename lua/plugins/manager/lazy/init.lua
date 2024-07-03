@@ -60,8 +60,14 @@ local plugins = {
         },
     },
     {
-        "mhartington/formatter.nvim",
-        lazy = true,
+        -- Library of 40+ independent Lua modules improving overall Neovim (version 0.8 and higher) experience with minimal effort
+        'echasnovski/mini.nvim',
+        version = false
+    },
+    {
+        -- Neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua API
+        "folke/neodev.nvim",
+        opts = {}
     },
     {
         -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
@@ -169,11 +175,6 @@ local plugins = {
         'vim-test/vim-test',
     },
     {
-        -- Neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua API
-        "folke/neodev.nvim",
-        opts = {}
-    },
-    {
         -- An extensible framework for interacting with tests within NeoVim.
         "nvim-neotest/neotest",
         dependencies = {
@@ -270,6 +271,10 @@ local plugins = {
         -- Color for hex code
         "NvChad/nvim-colorizer.lua",
         lazy = true
+    },
+    {
+        "mhartington/formatter.nvim",
+        lazy = true,
     },
     {
         -- Lightweight yet powerful formatter plugin for Neovim
