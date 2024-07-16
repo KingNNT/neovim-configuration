@@ -1,6 +1,3 @@
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-
--- Set up nvim-cmp.
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
@@ -80,11 +77,6 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
-
-cmp.event:on(
-    'confirm_done',
-    cmp_autopairs.on_confirm_done()
-)
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
