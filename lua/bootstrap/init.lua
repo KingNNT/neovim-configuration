@@ -1,6 +1,6 @@
 local M = {}
 
-local load = require("utils.load")
+local load = require("bootstrap.load")
 local lazy = require("bootstrap.lazy")
 
 --- Init app
