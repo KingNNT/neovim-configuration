@@ -1,10 +1,24 @@
 local builtin = require('telescope.builtin')
 local trouble = require("trouble.sources.telescope")
+local wk = require("which-key")
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+wk.add({
+    {
+        "<leader>f", group = "Find"
+    },
+    {
+        "<leader>ff", builtin.find_files, desc = "Find file"
+    },
+    {
+        "<leader>fg", builtin.live_grep, desc = "Find word by grep"
+    },
+    {
+        "<leader>fb", builtin.buffers, desc = "Find buffers"
+    },
+    {
+        "<leader>fh", builtin.help_tags, desc = "Find by tag"
+    }
+})
 
 -- You dont need to set any of these options. These are the default ones. Only
 -- the loading is important
