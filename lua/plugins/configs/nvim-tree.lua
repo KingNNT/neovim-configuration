@@ -5,11 +5,16 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-
 local api = require "nvim-tree.api"
-
--- global
-vim.api.nvim_set_keymap("n", "<leader>tt", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
+local wk = require("which-key")
+wk.add({
+    {
+        "<leader>t", group = "NvimTree"
+    },
+    {
+        "<leader>tt", ":NvimTreeToggle<cr>", desc = "NvimTree toggle", mode = { "n" }
+    }
+})
 
 local function my_on_attach(bufnr)
     local api = require "nvim-tree.api"
