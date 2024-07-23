@@ -183,11 +183,6 @@ local plugins = {
         lazy = true,
     },
     {
-        -- A Git wrapper so awesome, it should be illegal
-        'tpope/vim-fugitive',
-        lazy = true,
-    },
-    {
         -- Git integration for buffers
         'lewis6991/gitsigns.nvim',
         lazy = true,
