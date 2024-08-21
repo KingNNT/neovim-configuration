@@ -1,2 +1,0 @@
--- Use Git fugnitive
--- require("mini.git").setup()

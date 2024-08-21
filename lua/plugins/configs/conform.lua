@@ -1,5 +1,8 @@
 require("conform").setup({
     formatters_by_ft = {
+        lua = { "stylua" },
+        go = { "goimports", "gofmt" },
+        rust = { "rustfmt", lsp_format = "fallback" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
@@ -18,6 +21,9 @@ require("conform").setup({
         -- Use the "_" filetype to run formatters on filetypes that don't
         -- have other formatters configured.
         ["_"] = { "trim_whitespace" },
+    },
+    default_format_opts = {
+        lsp_format = "fallback",
     },
     -- If this is set, Conform will run the formatter on save.
     -- It will pass the table to conform.format().
@@ -39,7 +45,7 @@ require("conform").setup({
     notify_on_error = true,
 })
 
-vim.api.nvim_create_user_command("FormatByConform", function(args)
+vim.api.nvim_create_user_command("Format", function(args)
     local range = nil
     if args.count ~= -1 then
         local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]

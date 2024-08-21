@@ -20,40 +20,36 @@ local defaults = {
     spec = {},
     -- show a warning when issues were detected with your mappings
     notify = true,
-    -- Enable/disable WhichKey for certain mapping modes
-    modes = {
-        n = true, -- Normal mode
-        i = true, -- Insert mode
-        x = true, -- Visual mode
-        s = true, -- Select mode
-        o = true, -- Operator pending mode
-        t = true, -- Terminal mode
-        c = true, -- Command mode
-        -- Start hidden and wait for a key to be pressed before showing the popup
-        -- Only used by enabled xo mapping modes.
-        -- Set to false to show the popup immediately (after the delay)
-        defer = {
-            ["<C-V>"] = true,
-            V = true,
-        },
+    -- Which-key automatically sets up triggers for your mappings.
+    -- But you can disable this and setup the triggers manually.
+    -- Check the docs for more info.
+    ---@type wk.Spec
+    triggers = {
+        { "<auto>", mode = "nxsot" },
     },
+    -- Start hidden and wait for a key to be pressed before showing the popup
+    -- Only used by enabled xo mapping modes.
+    ---@param ctx { mode: string, operator: string }
+    defer = function(ctx)
+        return ctx.mode == "V" or ctx.mode == "<C-V>"
+    end,
     plugins = {
-        marks = true,     -- shows a list of your marks on ' and `
+        marks = true,   -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         spelling = {
-            enabled = true,   -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+            enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
             suggestions = 20, -- how many suggestions should be shown in the list?
         },
         presets = {
-            operators = true,    -- adds help for operators like d, y, ...
-            motions = true,      -- adds help for motions
+            operators = true, -- adds help for operators like d, y, ...
+            motions = true,  -- adds help for motions
             text_objects = true, -- help for text objects triggered after entering an operator
-            windows = true,      -- default bindings on <c-w>
-            nav = true,          -- misc bindings to work with windows
-            z = true,            -- bindings for folds, spelling and others prefixed with z
-            g = true,            -- bindings for prefixed with g
+            windows = true,  -- default bindings on <c-w>
+            nav = true,      -- misc bindings to work with windows
+            z = true,        -- bindings for folds, spelling and others prefixed with z
+            g = true,        -- bindings for prefixed with g
         },
     },
     ---@type wk.Win.opts
@@ -77,12 +73,11 @@ local defaults = {
     },
     layout = {
         width = { min = 20 }, -- min and max width of the columns
-        spacing = 3,          -- spacing between columns
-        align = "left",       -- align columns left, center or right
+        spacing = 3,        -- spacing between columns
     },
     keys = {
         scroll_down = "<c-d>", -- binding to scroll down inside the popup
-        scroll_up = "<c-u>",   -- binding to scroll up inside the popup
+        scroll_up = "<c-u>", -- binding to scroll up inside the popup
     },
     ---@type (string|wk.Sorter)[]
     --- Mappings are sorted using configured sorters and natural sort of the keys
@@ -100,6 +95,7 @@ local defaults = {
     -- expand = function(node)
     --   return not node.desc -- expand all nodes without a description
     -- end,
+    -- Functions/Lua Patterns for formatting the labels
     ---@type table<string, ({[1]:string, [2]:string}|fun(str:string):string)[]>
     replace = {
         key = {
@@ -109,14 +105,14 @@ local defaults = {
             -- { "<Space>", "SPC" },
         },
         desc = {
-            { "<Plug>%((.*)%)", "%1" },
-            { "^%+",            "" },
-            { "<[cC]md>",       "" },
-            { "<[cC][rR]>",     "" },
-            { "<[sS]ilent>",    "" },
-            { "^lua%s+",        "" },
-            { "^call%s+",       "" },
-            { "^:%s*",          "" },
+            { "<Plug>%(?(.*)%)?", "%1" },
+            { "^%+",              "" },
+            { "<[cC]md>",         "" },
+            { "<[cC][rR]>",       "" },
+            { "<[sS]ilent>",      "" },
+            { "^lua%s+",          "" },
+            { "^call%s+",         "" },
+            { "^:%s*",            "" },
         },
     },
     icons = {
@@ -124,8 +120,12 @@ local defaults = {
         separator = "➜", -- symbol used between a key and it's label
         group = "+", -- symbol prepended to a group
         ellipsis = "…",
+        -- set to false to disable all mapping icons,
+        -- both those explicitely added in a mapping
+        -- and those from rules
+        mappings = true,
         --- See `lua/which-key/icons.lua` for more details
-        --- Set to `false` to disable keymap icons
+        --- Set to `false` to disable keymap icons from rules
         ---@type wk.IconRule[]|false
         rules = {},
         -- use the highlights from mini.icons
@@ -139,13 +139,14 @@ local defaults = {
             Right = " ",
             C = "󰘴 ",
             M = "󰘵 ",
+            D = "󰘳 ",
             S = "󰘶 ",
             CR = "󰌑 ",
             Esc = "󱊷 ",
             ScrollWheelDown = "󱕐 ",
             ScrollWheelUp = "󱕑 ",
             NL = "󰌑 ",
-            BS = "⌫",
+            BS = "󰁮",
             Space = "󱁐 ",
             Tab = "󰌒 ",
             F1 = "󱊫",
@@ -164,19 +165,10 @@ local defaults = {
     },
     show_help = true, -- show a help message in the command line for using WhichKey
     show_keys = true, -- show the currently pressed key and its label as a message in the command line
-    -- Which-key automatically sets up triggers for your mappings.
-    -- But you can disable this and setup the triggers yourself.
-    -- Be aware, that triggers are not needed for visual and operator pending mode.
-    triggers = true, -- automatically setup triggers
+    -- disable WhichKey for certain buf types and file types.
     disable = {
-        -- disable WhichKey for certain buf types and file types.
         ft = {},
         bt = {},
-        -- disable a trigger for a certain context by returning true
-        ---@type fun(ctx: { keys: string, mode: string, plugin?: string }):boolean?
-        trigger = function(ctx)
-            return false
-        end,
     },
     debug = false, -- enable wk.log in the current directory
 }
