@@ -69,11 +69,6 @@ local plugins = {
     },
     -- END: Common --
     {
-        -- Library of 40+ independent Lua modules improving overall Neovim (version 0.8 and higher) experience with minimal effort
-        'echasnovski/mini.nvim',
-        version = false
-    },
-    {
         -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
         "nvim-lualine/lualine.nvim",
         lazy = true,
@@ -142,10 +137,6 @@ local plugins = {
         'folke/todo-comments.nvim'
     },
     {
-        -- Run your tests at the speed of thought
-        'vim-test/vim-test',
-    },
-    {
         -- An extensible framework for interacting with tests within NeoVim.
         "nvim-neotest/neotest",
         dependencies = {
@@ -192,11 +183,6 @@ local plugins = {
         lazy = true,
     },
     {
-        -- A Git wrapper so awesome, it should be illegal
-        'tpope/vim-fugitive',
-        lazy = true,
-    },
-    {
         -- Git integration for buffers
         'lewis6991/gitsigns.nvim',
         lazy = true,
@@ -226,14 +212,6 @@ local plugins = {
         lazy = true,
     },
     {
-        -- markdown preview plugin for (neo)vim
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-        lazy = true
-    },
-    {
         -- The superior project management solution for neovim.
         "ahmedkhalf/project.nvim",
         lazy = true,
@@ -242,10 +220,6 @@ local plugins = {
         -- Color for hex code
         "NvChad/nvim-colorizer.lua",
         lazy = true
-    },
-    {
-        "mhartington/formatter.nvim",
-        lazy = true,
     },
     {
         -- Lightweight yet powerful formatter plugin for Neovim
@@ -267,14 +241,11 @@ local core_conf_files = {
     "conform.lua",
     "dashboard-nvim.lua",
     "flash.lua",
-    "formatter.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
     "lualine.lua",
-    "markdown-preview.vim",
     "mason.lua",
-    "mini.lua",
     "neogen.lua",
     "neotest.lua",
     "nvim-autopairs.lua",
@@ -289,7 +260,6 @@ local core_conf_files = {
     "telescope.lua",
     "todo-comments.lua",
     "tokyonight.lua",
-    "vim-test.vim",
     "which-key.lua"
 }
 

@@ -9,7 +9,7 @@ map("i", "<A-k>", "<Esc>:m-2<CR>==", { desc = "Move line down" })
 map("i", "∆", "<Esc>:m+<CR>==", { desc = "Move line up on Mac" })
 map("i", "˚", "<Esc>:m-2<CR>==", { desc = "Move line down on Mac" })
 
-map("n", ":noh <CR>", "<Left>", { desc = "Clear highlights" })
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
 map("n", "<leader>n", "<cmd> set nu! <CR>", { desc = "Toggle line number" })
 map("n", "<leader>rn", "<cmd> set rnu! <CR>", { desc = "Toggle relative number" })
 map("n", "<A-j>", "<Esc>:m+<CR>==", { desc = "Move line up" })
