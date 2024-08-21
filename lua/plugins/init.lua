@@ -222,10 +222,6 @@ local plugins = {
         lazy = true
     },
     {
-        "mhartington/formatter.nvim",
-        lazy = true,
-    },
-    {
         -- Lightweight yet powerful formatter plugin for Neovim
         "stevearc/conform.nvim",
         lazy = true
@@ -245,7 +241,6 @@ local core_conf_files = {
     "conform.lua",
     "dashboard-nvim.lua",
     "flash.lua",
-    "formatter.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
