@@ -260,6 +260,7 @@ local core_conf_files = {
     "telescope.lua",
     "todo-comments.lua",
     "tokyonight.lua",
+    "trouble.lua",
     "which-key.lua"
 }
 
