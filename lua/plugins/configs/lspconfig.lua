@@ -47,7 +47,7 @@ lspconfig.intelephense.setup {
 
 lspconfig.pyright.setup {}
 
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 local function get_typescript_server_path(root_dir)
   local global_ts = '/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib'
