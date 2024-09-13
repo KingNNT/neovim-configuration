@@ -14,7 +14,7 @@ require("mason-lspconfig").setup {
         "emmet_language_server",
         "graphql",
         "jsonls",
-        "tsserver",
+        "ts_ls",
         "nginx_language_server",
         "intelephense",
         "prismals",
