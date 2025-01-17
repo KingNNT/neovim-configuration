@@ -30,6 +30,10 @@ local plugins = {
         priority = 970,
     },
     {
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
+    },
+    {
         -- Quickstart configs for Nvim LSP
         "neovim/nvim-lspconfig",
         lazy = true,
@@ -50,6 +54,22 @@ local plugins = {
         lazy = true,
     },
     {
+        "mfussenegger/nvim-dap"
+    },
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio"
+        }
+    },
+    {
+        "mfussenegger/nvim-lint"
+    },
+    -- {
+    --     "mhartington/formatter.nvim"
+    -- },
+    {
         -- A completion plugin for neovim coded in Lua
         "hrsh7th/nvim-cmp",
         dependencies = {
@@ -62,11 +82,6 @@ local plugins = {
             "saadparwaiz1/cmp_luasnip"
         },
     },
-    {
-        -- Neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua API
-        "folke/neodev.nvim",
-        opts = {}
-    },
     -- END: Common --
     {
         -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
@@ -78,10 +93,6 @@ local plugins = {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons'
-    },
-    {
-        -- EditorConfig plugin for Vim
-        "editorconfig/editorconfig-vim",
     },
     {
         -- Not UFO in the sky, but an ultra fold in Neovim.
@@ -147,6 +158,7 @@ local plugins = {
             -- Plugin adapter
             "haydenmeade/neotest-jest",
             "thenbe/neotest-playwright",
+            "nvim-neotest/neotest-python"
         }
     },
     {
@@ -212,11 +224,6 @@ local plugins = {
         lazy = true,
     },
     {
-        -- The superior project management solution for neovim.
-        "ahmedkhalf/project.nvim",
-        lazy = true,
-    },
-    {
         -- Color for hex code
         "NvChad/nvim-colorizer.lua",
         lazy = true
@@ -233,7 +240,7 @@ local config = require 'plugins.configs.lazy'
 lazy.setup(plugins, config)
 
 local core_conf_files = {
-    "neodev.lua",
+    "lazydev.lua",
     --
     "aerial.lua",
     "bufferline.lua",
@@ -241,6 +248,7 @@ local core_conf_files = {
     "conform.lua",
     "dashboard-nvim.lua",
     "flash.lua",
+    -- "formatter.lua",
     "gitsigns.lua",
     "indent-blankline.lua",
     "lspconfig.lua",
@@ -251,9 +259,10 @@ local core_conf_files = {
     "nvim-autopairs.lua",
     "nvim-cmp.lua",
     "nvim-colorizer.lua",
+    "nvim-dapui.lua",
+    "nvim-lint.lua",
     "nvim-tree.lua",
     "nvim-treesitter.lua",
-    "nvim-ts-context-commentstring.lua",
     "nvim-ufo.lua",
     "nvim-web-devicons.lua",
     "rainbow-delimiters.lua",
