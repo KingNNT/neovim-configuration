@@ -24,6 +24,7 @@ require("mason-lspconfig").setup {
         "tailwindcss",
         "terraformls",
         "volar",
+        "lua_ls",
     },
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.

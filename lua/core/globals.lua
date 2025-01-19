@@ -1,7 +1,7 @@
 local fn = vim.fn
 local api = vim.api
 
-local util_common = require('utils.common')
+local utils = require('utils')
 
 -- Inspect something
 function _G.inspect(item)
@@ -11,9 +11,9 @@ end
 ------------------------------------------------------------------------
 --                          custom variables                          --
 ------------------------------------------------------------------------
-vim.g.is_windows_os             = (util_common.has("win32") or util_common.has("win64")) and true or false
-vim.g.is_linux_os               = (util_common.has("unix") and (not util_common.has("macunix"))) and true or false
-vim.g.is_mac_os                 = util_common.has("macunix") and true or false
+vim.g.is_windows_os             = (utils.has("win32") or utils.has("win64")) and true or false
+vim.g.is_linux_os               = (utils.has("unix") and (not utils.has("macunix"))) and true or false
+vim.g.is_mac_os                 = utils.has("macunix") and true or false
 
 vim.g.logging_level             = "info"
 

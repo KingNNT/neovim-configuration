@@ -1,0 +1,63 @@
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+local lspconfig = require('lspconfig')
+
+lspconfig['intelephense'].setup {
+    capabilities = capabilities
+}
+lspconfig['pyright'].setup {
+    capabilities = capabilities
+}
+lspconfig['ts_ls'].setup {
+    capabilities = capabilities
+}
+lspconfig['volar'].setup {
+    capabilities = capabilities
+}
+lspconfig['prismals'].setup {
+    capabilities = capabilities
+}
+lspconfig['tailwindcss'].setup {
+    capabilities = capabilities
+}
+lspconfig['cssls'].setup {
+    capabilities = capabilities
+}
+lspconfig['cssmodules_ls'].setup {
+    capabilities = capabilities
+}
+lspconfig['rust_analyzer'].setup {
+    capabilities = capabilities
+}
+lspconfig['lua_ls'].setup {
+    capabilities = capabilities
+}
+
+local M = {}
+
+M.opts = {
+    -- 'default' for mappings similar to built-in completion
+    -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
+    -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+    -- See the full "keymap" documentation for information on defining your own keymap.
+    keymap = { preset = 'super-tab' },
+
+    appearance = {
+        -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+        -- Useful for when your theme doesn't support blink.cmp
+        -- Will be removed in a future release
+        use_nvim_cmp_as_default = true,
+        -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+        -- Adjusts spacing to ensure icons are aligned
+        nerd_font_variant = 'mono'
+    },
+
+    -- Default list of enabled providers defined so that you can extend it
+    -- elsewhere in your config, without redefining it, due to `opts_extend`
+    sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
+}
+
+M.opts_extend = { "sources.default" }
+
+return M

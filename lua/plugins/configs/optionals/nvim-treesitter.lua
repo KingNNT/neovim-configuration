@@ -38,3 +38,8 @@ require 'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+require('ts_context_commentstring').setup {
+    enable = true,
+    enable_autocmd = false,
+}
