@@ -1,14 +1,12 @@
 local M = {}
 
-local load = require("bootstrap.load")
-local lazy = require("bootstrap.lazy")
-
 --- Init app
 M.init = function()
-  load.load_core()
-  lazy.boot_lazy()
-  load.load_plugin()
-  load.load_mappings()
+  require('core.globals')
+  require('core.options')
+  require('core.lazy')
+  require('plugins')
+  require('core.key-mapping')
 end
 
 return M
