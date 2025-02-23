@@ -1,5 +1,5 @@
 local plugins = {
-    -- START: Common --
+    -- Core dependencies
     {
         -- plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
         "nvim-lua/plenary.nvim",
@@ -18,6 +18,7 @@ local plugins = {
         lazy = false,
         priority = 980,
     },
+    -- UI Enhancements
     {
         "folke/snacks.nvim",
         priority = 970,
@@ -38,17 +39,37 @@ local plugins = {
         lazy = true,
     },
     {
-        "folke/lazydev.nvim",
-        ft = "lua", -- only load on lua files
+        -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+        "nvim-lualine/lualine.nvim",
+        lazy = true,
     },
+    {
+        -- A snazzy bufferline for Neovim
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        lazy = true
+    },
+    {
+        -- Not UFO in the sky, but an ultra fold in Neovim.
+        'kevinhwang91/nvim-ufo',
+        lazy = true,
+        dependencies = 'kevinhwang91/promise-async'
+    },
+    {
+        -- Navigate your code with search labels, enhanced character motions and Treesitter integration
+        "folke/flash.nvim",
+        event = "VeryLazy",
+    },
+    -- LSP & Autocompletion
     {
         -- Quickstart configs for Nvim LSP
         "neovim/nvim-lspconfig",
         lazy = true,
     },
-    -- Portable package manager for Neovim that runs everywhere Neovim runs.
-    -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
     {
+        -- Portable package manager for Neovim that runs everywhere Neovim runs.
+        -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
         "williamboman/mason.nvim",
         lazy = true,
     },
@@ -62,24 +83,9 @@ local plugins = {
         lazy = true,
     },
     {
-        "mfussenegger/nvim-dap",
-        lazy = true
-    },
-    {
-        "rcarriga/nvim-dap-ui",
-        dependencies = {
-            "mfussenegger/nvim-dap",
-            "nvim-neotest/nvim-nio"
-        },
-        lazy = true
-    },
-    {
         "mfussenegger/nvim-lint",
         lazy = true
     },
-    -- {
-    --     "mhartington/formatter.nvim"
-    -- },
     {
         'saghen/blink.cmp',
         -- optional: provides snippets for the snippet source
@@ -100,25 +106,40 @@ local plugins = {
             return require('plugins.configs.optionals.blink').opts_extend
         end,
     },
-    -- END: Common --
     {
-        -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-        "nvim-lualine/lualine.nvim",
-        lazy = true,
+        -- Lightweight yet powerful formatter plugin for Neovim
+        "stevearc/conform.nvim",
+        lazy = true
     },
+    -- Debugging & Testing
     {
-        -- A snazzy bufferline for Neovim
-        "akinsho/bufferline.nvim",
-        version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons',
+        "mfussenegger/nvim-dap",
         lazy = true
     },
     {
-        -- Not UFO in the sky, but an ultra fold in Neovim.
-        'kevinhwang91/nvim-ufo',
-        lazy = true,
-        dependencies = 'kevinhwang91/promise-async'
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio"
+        },
+        lazy = true
     },
+    {
+        -- An extensible framework for interacting with tests within NeoVim.
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            -- Plugin adapter
+            "haydenmeade/neotest-jest",
+            "thenbe/neotest-playwright",
+            "nvim-neotest/neotest-python"
+        },
+        lazy = true
+    },
+    -- File Management
     {
         -- A file explorer tree for neovim written in lua
         "nvim-tree/nvim-tree.lua",
@@ -136,11 +157,6 @@ local plugins = {
         lazy = true
     },
     {
-        -- Navigate your code with search labels, enhanced character motions and Treesitter integration
-        "folke/flash.nvim",
-        event = "VeryLazy",
-    },
-    {
         -- Find, Filter, Preview, Pick. All lua, all the time.
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
@@ -152,12 +168,7 @@ local plugins = {
         build = 'make',
         lazy = true,
     },
-    {
-        -- autopairs for neovim written by lua
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        lazy = true
-    },
+    -- Productivity Tools
     {
         -- Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
         'numToStr/Comment.nvim',
@@ -166,21 +177,6 @@ local plugins = {
     {
         -- Highlight, list and search todo comments in your projects
         'folke/todo-comments.nvim',
-        lazy = true
-    },
-    {
-        -- An extensible framework for interacting with tests within NeoVim.
-        "nvim-neotest/neotest",
-        dependencies = {
-            "nvim-neotest/nvim-nio",
-            "nvim-lua/plenary.nvim",
-            "antoinemadec/FixCursorHold.nvim",
-            "nvim-treesitter/nvim-treesitter",
-            -- Plugin adapter
-            "haydenmeade/neotest-jest",
-            "thenbe/neotest-playwright",
-            "nvim-neotest/neotest-python"
-        },
         lazy = true
     },
     {
@@ -210,6 +206,7 @@ local plugins = {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         lazy = true,
     },
+    -- Git Integration
     {
         -- Git integration for buffers
         'lewis6991/gitsigns.nvim',
@@ -217,6 +214,12 @@ local plugins = {
         dependencies = {
             'tpope/vim-fugitive'
         }
+    },
+    -- Miscellaneous
+    {
+        -- Color for hex code
+        "NvChad/nvim-colorizer.lua",
+        lazy = true
     },
     {
         -- Vim plugin for automatic time tracking and metrics generated from your programming activity.
@@ -236,15 +239,15 @@ local plugins = {
         lazy = true,
     },
     {
-        -- Color for hex code
-        "NvChad/nvim-colorizer.lua",
+        -- autopairs for neovim written by lua
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
         lazy = true
     },
     {
-        -- Lightweight yet powerful formatter plugin for Neovim
-        "stevearc/conform.nvim",
-        lazy = true
-    }
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
+    },
 }
 
 return plugins
