@@ -1,4 +1,6 @@
-local config = {
+local M = {}
+
+M.opts = {
     -- labels = "abcdefghijklmnopqrstuvwxyz",
     labels = "asdfghjklqwertyuiopzxcvbnm",
     search = {
@@ -255,20 +257,12 @@ local config = {
     },
 }
 
-local flash = require("flash")
-flash.setup(config)
-local wk = require("which-key")
-wk.add({
-    { "<leader>fl",  group = "flash" },
-    { "<leader>fls", function() require("flash").jump() end, desc = "Flash", mode = { "n", "x", "o" } },
-    {
-        "<leader>flS",
-        function()
-            require("flash").treesitter()
-        end,
-        desc = "Flash Treesitter",
-        mode = { "n", "x", "o" }
-    },
-    { "<leader>flr", function() require("flash").remote() end,            desc = "Remote Flash",      mode = "o" },
-    { "<leader>flR", function() require("flash").treesitter_search() end, desc = "Treesitter Search", mode = { "o", "x" } },
-})
+M.keys = {
+    { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+    { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+    { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+    { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+}
+
+return M

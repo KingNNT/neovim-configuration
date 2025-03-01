@@ -12,7 +12,7 @@
 
 <div align="center">
 
-[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.10.1-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
+[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.10.4-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
 [![GitHub Issues](https://img.shields.io/github/issues/KingNNT/KingNNT.svg?style=flat-square&label=Issues&color=d77982)](https://github.com/KingNNT/neovim-configuration)
 
 </div>
@@ -26,6 +26,12 @@
 - It is just a simple neovim config
 
 ## Install
+
+### Install Dependencies
+
+- [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#installation)
+
+### Install configuration
 
 ```
 git clone https://github.com/KingNNT/neovim-configuration ~/.config/nvim --depth 1 && nvim
