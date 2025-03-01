@@ -60,6 +60,12 @@ local plugins = {
         -- Navigate your code with search labels, enhanced character motions and Treesitter integration
         "folke/flash.nvim",
         event = "VeryLazy",
+        opts = function()
+            return require('plugins.configs.optionals.flash').opts
+        end,
+        keys = function()
+            return require('plugins.configs.optionals.flash').keys
+        end,
     },
     -- LSP & Autocompletion
     {
@@ -87,24 +93,17 @@ local plugins = {
         lazy = true
     },
     {
-        'saghen/blink.cmp',
-        -- optional: provides snippets for the snippet source
-        dependencies = 'rafamadriz/friendly-snippets',
-
-        -- use a release tag to download pre-built binaries
-        version = '*',
-        -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-        -- build = 'cargo build --release',
-        -- If you use nix, you can build from source using latest nightly rust with:
-        -- build = 'nix run .#build-plugin',
-
-        ---@module 'blink.cmp'
-        opts = function()
-            return require('plugins.configs.optionals.blink').opts
-        end,
-        opts_extend = function()
-            return require('plugins.configs.optionals.blink').opts_extend
-        end,
+        -- A completion plugin for neovim coded in Lua
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip"
+        },
     },
     {
         -- Lightweight yet powerful formatter plugin for Neovim
@@ -138,35 +137,6 @@ local plugins = {
             "nvim-neotest/neotest-python"
         },
         lazy = true
-    },
-    -- File Management
-    {
-        -- A file explorer tree for neovim written in lua
-        "nvim-tree/nvim-tree.lua",
-        lazy = true,
-    },
-    {
-        -- Neovim plugin for a code outline window
-        'stevearc/aerial.nvim',
-        opts = {},
-        -- Optional dependencies
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-tree/nvim-web-devicons"
-        },
-        lazy = true
-    },
-    {
-        -- Find, Filter, Preview, Pick. All lua, all the time.
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.5',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        lazy = true,
-    },
-    {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make',
-        lazy = true,
     },
     -- Productivity Tools
     {
