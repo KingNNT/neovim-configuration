@@ -19,7 +19,7 @@
 
 ## Showcase
 
-![neovim-dashboard-image](./images/neovim_1.png?raw=true)
+![neovim-dashboard-image](./images/dashboard_20250306T201303.png?raw=true)
 
 ## What is it?
 
@@ -37,6 +37,12 @@
 git clone https://github.com/KingNNT/neovim-configuration ~/.config/nvim --depth 1 && nvim
 
 ```
+
+### Install libraries
+
+#### Python
+
+With python, i use `isort` and `black`. You can install them by [mason](https://github.com/williamboman/mason.nvim?tab=readme-ov-file)
 
 ## Uninstall
 
