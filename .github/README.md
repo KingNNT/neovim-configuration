@@ -40,9 +40,16 @@ git clone https://github.com/KingNNT/neovim-configuration ~/.config/nvim --depth
 
 ### Install libraries
 
+You can install more library with [mason](https://github.com/williamboman/mason.nvim?tab=readme-ov-file)
+
+#### HTML
+
+- prettier
+
 #### Python
 
-With python, i use `isort` and `black`. You can install them by [mason](https://github.com/williamboman/mason.nvim?tab=readme-ov-file)
+- black
+- isort
 
 ## Uninstall
 
