@@ -13,15 +13,8 @@ require("conform").setup({
         python = function(bufnr)
             local result = {}
             if require("conform").get_formatter_info("ruff_format", bufnr).available then
-                table.insert(result, "ruff")
+                table.insert(result, "ruff format")
             end
-            if require("conform").get_formatter_info("isort", bufnr).available then
-                table.insert(result, "isort")
-            end
-            if require("conform").get_formatter_info("black", bufnr).available then
-                table.insert(result, "black")
-            end
-
             return result
         end,
         ["*"] = { "codespell" },
@@ -31,13 +24,6 @@ require("conform").setup({
     },
     default_format_opts = {
         lsp_format = "fallback",
-    },
-    formatters = {
-        isort = {
-            command = "isort",
-            args = { "--profile", "black", "-" }, -- Match black style
-            stdin = true,
-        },
     },
     log_level = vim.log.levels.ERROR,
     notify_on_error = true,

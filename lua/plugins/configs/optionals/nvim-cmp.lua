@@ -85,7 +85,11 @@ require('lspconfig')['intelephense'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['pyright'].setup {
-    capabilities = capabilities
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+}
+require('lspconfig')['ruff'].setup {
+    capabilities = capabilities,
 }
 require('lspconfig')['ts_ls'].setup {
     capabilities = capabilities

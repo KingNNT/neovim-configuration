@@ -46,11 +46,6 @@ You can install more library with [mason](https://github.com/williamboman/mason.
 
 - prettier
 
-#### Python
-
-- black
-- isort
-
 ## Uninstall
 
 - **_Linux / Macos (unix)_**

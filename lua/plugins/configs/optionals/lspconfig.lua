@@ -103,6 +103,15 @@ lspconfig.cssmodules_ls.setup {}
 
 lspconfig.rust_analyzer.setup {}
 
+lspconfig.ruff.setup {
+  init_options = {
+    settings = {
+      organizeImports = true
+    }
+  }
+}
+
+
 lspconfig.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then
@@ -143,3 +152,18 @@ vim.api.nvim_create_user_command("TSOrganizeImports", function()
     arguments = { vim.api.nvim_buf_get_name(0) },
   })
 end, { desc = "Organize TypeScript/JavaScript Imports" })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client == nil then
+      return
+    end
+    if client.name == 'ruff' then
+      -- Disable hover in favor of Pyright
+      client.server_capabilities.hoverProvider = false
+    end
+  end,
+  desc = 'LSP: Disable hover capability from Ruff',
+})
