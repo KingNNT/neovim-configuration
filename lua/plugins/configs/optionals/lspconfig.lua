@@ -12,8 +12,16 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  group = vim.api.nvim_create_augroup('UserLspConfig', { clear = true }),
   callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client == nil then
+      return
+    end
+    -- Disable Ruff hover in favor of Pyright
+    if client.name == 'ruff' then
+      client.server_capabilities.hoverProvider = false
+    end
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
@@ -38,15 +46,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.buf.format { async = true }
     end, opts)
   end,
+  desc = 'LSP: Set keymaps and disable hover for Ruff',
 })
 
-lspconfig.intelephense.setup {
-  filetypes = { "php" },
-  root_dir = util.root_pattern("composer.json", ".git")
+vim.api.nvim_create_user_command("TSOrganizeImports", function()
+  vim.lsp.buf.execute_command({
+    command = "_typescript.organizeImports",
+    arguments = { vim.api.nvim_buf_get_name(0) },
+  })
+end, { desc = "Organize TypeScript/JavaScript Imports" })
+
+-- LSP config
+
+lspconfig.cssls.setup {
+  filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
 }
-
-lspconfig.pyright.setup {}
-
+lspconfig.cssmodules_ls.setup {}
 lspconfig.ts_ls.setup {
   settings = {
     typescript = {
@@ -65,7 +80,28 @@ lspconfig.ts_ls.setup {
     }
   }
 }
-
+lspconfig.intelephense.setup {
+  filetypes = { "php" },
+  root_dir = util.root_pattern("composer.json", ".git")
+}
+lspconfig.prismals.setup {}
+lspconfig.pyright.setup {}
+lspconfig.ruff.setup {
+  init_options = {
+    settings = {
+      organizeImports = true
+    }
+  }
+}
+lspconfig.rust_analyzer.setup {}
+lspconfig.tailwindcss.setup {}
+lspconfig.terraformls.setup {}
+lspconfig.volar.setup {
+  filetypes = { 'typescript', 'javascript', 'vue', 'json' },
+  on_new_config = function(new_config, new_root_dir)
+    new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
+  end,
+}
 local function get_typescript_server_path(root_dir)
   local global_ts = '/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib'
   -- Alternative location if installed as root:
@@ -83,35 +119,6 @@ local function get_typescript_server_path(root_dir)
     return global_ts
   end
 end
-
-lspconfig.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'vue', 'json' },
-  on_new_config = function(new_config, new_root_dir)
-    new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
-  end,
-}
-
-lspconfig.prismals.setup {}
-
-lspconfig.tailwindcss.setup {}
-
-lspconfig.cssls.setup {
-  filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
-}
-
-lspconfig.cssmodules_ls.setup {}
-
-lspconfig.rust_analyzer.setup {}
-
-lspconfig.ruff.setup {
-  init_options = {
-    settings = {
-      organizeImports = true
-    }
-  }
-}
-
-
 lspconfig.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then
@@ -145,25 +152,3 @@ lspconfig.lua_ls.setup {
     Lua = {}
   }
 }
-
-vim.api.nvim_create_user_command("TSOrganizeImports", function()
-  vim.lsp.buf.execute_command({
-    command = "_typescript.organizeImports",
-    arguments = { vim.api.nvim_buf_get_name(0) },
-  })
-end, { desc = "Organize TypeScript/JavaScript Imports" })
-
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
-  callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client == nil then
-      return
-    end
-    if client.name == 'ruff' then
-      -- Disable hover in favor of Pyright
-      client.server_capabilities.hoverProvider = false
-    end
-  end,
-  desc = 'LSP: Disable hover capability from Ruff',
-})

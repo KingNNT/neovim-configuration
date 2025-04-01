@@ -19,6 +19,7 @@ require("mason-lspconfig").setup {
         "intelephense",
         "prismals",
         "pyright",
+        "ruff",
         "rust_analyzer",
         "sqlls",
         "tailwindcss",

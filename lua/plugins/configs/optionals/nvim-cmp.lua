@@ -80,27 +80,11 @@ cmp.setup.cmdline(':', {
 
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['intelephense'].setup {
+
+require('lspconfig')['bashls'].setup {
     capabilities = capabilities
 }
-require('lspconfig')['pyright'].setup {
-    capabilities = capabilities,
-    disableOrganizeImports = true,
-}
-require('lspconfig')['ruff'].setup {
-    capabilities = capabilities,
-}
-require('lspconfig')['ts_ls'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['volar'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['prismals'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['tailwindcss'].setup {
+require('lspconfig')['cmake'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['cssls'].setup {
@@ -109,7 +93,58 @@ require('lspconfig')['cssls'].setup {
 require('lspconfig')['cssmodules_ls'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['dockerls'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['docker_compose_language_service'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['eslint'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['emmet_language_server'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['graphql'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['jsonls'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['ts_ls'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['nginx_language_server'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['intelephense'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['prismals'].setup {
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+}
+require('lspconfig')['pyright'].setup {
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+}
+require('lspconfig')['ruff'].setup {
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+}
 require('lspconfig')['rust_analyzer'].setup {
+    capabilities = capabilities,
+}
+require('lspconfig')['sqlls'].setup {
+    capabilities = capabilities,
+}
+require('lspconfig')['tailwindcss'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['terraformls'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['volar'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['lua_ls'].setup {
