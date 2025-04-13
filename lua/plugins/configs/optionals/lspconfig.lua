@@ -56,6 +56,42 @@ vim.api.nvim_create_user_command("TSOrganizeImports", function()
   })
 end, { desc = "Organize TypeScript/JavaScript Imports" })
 
+vim.api.nvim_create_user_command("RuffFix", function()
+  local file = vim.api.nvim_buf_get_name(0)
+  if file == "" then
+    print("No file detected")
+    return
+  end
+  local bufnr = vim.api.nvim_get_current_buf()
+  -- Run ruff check --fix on the current file
+  vim.fn.jobstart({ "ruff", "check", "--fix", file }, {
+    stdout_buffered = true,
+    on_stdout = function(_, data)
+      if next(data) ~= nil then
+        print(table.concat(data, "\n"))
+      end
+    end,
+    on_stderr = function(_, data)
+      if next(data) ~= nil then
+        print("Error: " .. table.concat(data, "\n"))
+      end
+    end,
+    on_exit = function(_, code)
+      if code == 0 then
+        vim.schedule(function()
+          if vim.api.nvim_buf_is_loaded(bufnr) then
+            vim.api.nvim_command("edit!")
+          end
+        end)
+      else
+        print("❌ Ruff encountered errors.")
+      end
+    end,
+  })
+end, {
+  desc = "Run `ruff check --fix` on the current file",
+})
+
 -- LSP config
 
 lspconfig.cssls.setup {
