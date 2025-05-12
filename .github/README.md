@@ -12,14 +12,14 @@
 
 <div align="center">
 
-[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.10.1-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
+[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.10.4-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
 [![GitHub Issues](https://img.shields.io/github/issues/KingNNT/KingNNT.svg?style=flat-square&label=Issues&color=d77982)](https://github.com/KingNNT/neovim-configuration)
 
 </div>
 
 ## Showcase
 
-![neovim-dashboard-image](./images/neovim_1.png?raw=true)
+![neovim-dashboard-image](./images/dashboard_20250306T201303.png?raw=true)
 
 ## What is it?
 
@@ -27,10 +27,24 @@
 
 ## Install
 
+### Install Dependencies
+
+- [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#installation)
+
+### Install configuration
+
 ```
 git clone https://github.com/KingNNT/neovim-configuration ~/.config/nvim --depth 1 && nvim
 
 ```
+
+### Install libraries
+
+You can install more library with [mason](https://github.com/williamboman/mason.nvim?tab=readme-ov-file)
+
+#### HTML
+
+- prettier
 
 ## Uninstall
 

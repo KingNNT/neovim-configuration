@@ -4,18 +4,18 @@ require("conform").setup({
         go = { "goimports", "gofmt" },
         rust = { "rustfmt", lsp_format = "fallback" },
         javascript = { "prettier" },
-        typescript = { "prettier" },
+        typescript = { "eslint_d", "prettier", "ts_ls" },
         javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
+        typescriptreact = { "eslint_d", "prettier", "ts_ls" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
         python = function(bufnr)
+            local result = {}
             if require("conform").get_formatter_info("ruff_format", bufnr).available then
-                return { "ruff_format" }
-            else
-                return { "isort", "black" }
+                table.insert(result, "ruff format")
             end
+            return result
         end,
         ["*"] = { "codespell" },
         -- Use the "_" filetype to run formatters on filetypes that don't
@@ -25,23 +25,7 @@ require("conform").setup({
     default_format_opts = {
         lsp_format = "fallback",
     },
-    -- If this is set, Conform will run the formatter on save.
-    -- It will pass the table to conform.format().
-    -- This can also be a function that returns the table.
-    -- format_on_save = {
-    --     -- I recommend these options. See :help conform.format for details.
-    --     lsp_format = "fallback",
-    --     timeout_ms = 500,
-    -- },
-    -- If this is set, Conform will run the formatter asynchronously after save.
-    -- It will pass the table to conform.format().
-    -- This can also be a function that returns the table.
-    -- format_after_save = {
-    --     lsp_format = "fallback",
-    -- },
-    -- Set the log level. Use `:ConformInfo` to see the location of the log file.
     log_level = vim.log.levels.ERROR,
-    -- Conform will notify you when a formatter errors
     notify_on_error = true,
 })
 
