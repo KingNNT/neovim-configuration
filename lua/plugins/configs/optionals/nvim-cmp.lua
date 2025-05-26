@@ -144,7 +144,7 @@ require('lspconfig')['tailwindcss'].setup {
 require('lspconfig')['terraformls'].setup {
     capabilities = capabilities
 }
-require('lspconfig')['volar'].setup {
+require('lspconfig')['vuels'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['lua_ls'].setup {
