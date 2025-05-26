@@ -97,7 +97,7 @@ end, {
 lspconfig.cssls.setup {
   filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
 }
-lspconfig.cssmodules_ls.setup {}
+vim.lsp.enable('cssmodules_ls')
 lspconfig.ts_ls.setup {
   settings = {
     typescript = {
@@ -120,71 +120,79 @@ lspconfig.intelephense.setup {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 }
-lspconfig.prismals.setup {}
-lspconfig.pyright.setup {}
-lspconfig.ruff.setup {
+vim.lsp.enable('prismals')
+vim.lsp.config('pyright', {
+  filetypes = { 'python' },
+})
+vim.lsp.config('ruff', {
+  filetypes = { 'python' },
   init_options = {
     settings = {
       organizeImports = true
     }
   }
-}
-lspconfig.rust_analyzer.setup {}
-lspconfig.tailwindcss.setup {}
-lspconfig.terraformls.setup {}
-lspconfig.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'vue', 'json' },
-  on_new_config = function(new_config, new_root_dir)
-    new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
-  end,
-}
-local function get_typescript_server_path(root_dir)
-  local global_ts = '/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib'
-  -- Alternative location if installed as root:
-  -- local global_ts = '/usr/local/lib/node_modules/typescript/lib'
-  local found_ts = ''
-  local function check_dir(path)
-    found_ts = util.path.join(path, 'node_modules', 'typescript', 'lib')
-    if util.path.exists(found_ts) then
-      return path
-    end
-  end
-  if util.search_ancestors(root_dir, check_dir) then
-    return found_ts
-  else
-    return global_ts
-  end
-end
-lspconfig.lua_ls.setup {
+})
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('terraformls')
+
+vim.lsp.config('vuels', {
+  -- add filetypes for typescript, javascript and vue
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+  init_options = {
+    vue = {
+      -- disable hybrid mode
+      hybridMode = false,
+    },
+  },
+})
+
+vim.lsp.config('lua_ls', {
+  filetypes = { 'lua' },
   on_init = function(client)
     if client.workspace_folders then
       local path = client.workspace_folders[1].name
-      if vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc') then
+      if
+          path ~= vim.fn.stdpath('config')
+          and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
+      then
         return
       end
     end
 
     client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
       runtime = {
-        -- Tell the language server which version of Lua you're using
-        -- (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT'
+        -- Tell the language server which version of Lua you're using (most
+        -- likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+        -- Tell the language server how to find Lua modules same way as Neovim
+        -- (see `:h lua-module-load`)
+        path = {
+          'lua/?.lua',
+          'lua/?/init.lua',
+        },
       },
       -- Make the server aware of Neovim runtime files
       workspace = {
         checkThirdParty = false,
         library = {
           vim.env.VIMRUNTIME
-          -- Depending on the usage, you might want to add additional paths here.
-          -- "${3rd}/luv/library"
-          -- "${3rd}/busted/library",
+          -- Depending on the usage, you might want to add additional paths
+          -- here.
+          -- '${3rd}/luv/library'
+          -- '${3rd}/busted/library'
         }
-        -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
-        -- library = vim.api.nvim_get_runtime_file("", true)
+        -- Or pull in all of 'runtimepath'.
+        -- NOTE: this is a lot slower and will cause issues when working on
+        -- your own configuration.
+        -- See https://github.com/neovim/nvim-lspconfig/issues/3189
+        -- library = {
+        --   vim.api.nvim_get_runtime_file('', true),
+        -- }
       }
     })
   end,
   settings = {
     Lua = {}
   }
-}
+})

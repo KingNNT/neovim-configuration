@@ -201,10 +201,10 @@ local plugins = {
         "folke/which-key.nvim",
         event = "VeryLazy",
         opts = function()
-            return require('plugins.configs.optionals.which-key').opts
+            return require('plugins.configs.optionals.3_which-key').opts
         end,
         init = function()
-            return require('plugins.configs.optionals.which-key').init
+            return require('plugins.configs.optionals.3_which-key').init
         end,
         lazy = true,
     },
