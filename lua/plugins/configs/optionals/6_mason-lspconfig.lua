@@ -1,4 +1,3 @@
-require("mason").setup()
 require("mason-lspconfig").setup {
     -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
     -- This setting has no relation with the `automatic_installation` setting.
@@ -24,9 +23,11 @@ require("mason-lspconfig").setup {
         "sqlls",
         "tailwindcss",
         "terraformls",
-        "volar",
+        "vuels",
         "lua_ls",
     },
+    ---@type boolean | string[] | { exclude: string[] }
+    automatic_enable = false,
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.
     -- Can either be:
