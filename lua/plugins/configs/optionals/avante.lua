@@ -13,7 +13,7 @@ M.opts = {
         providers = {
             claude = {
                 endpoint = "https://api.anthropic.com",
-                model = "claude-3-5-sonnet-20241022",
+                model = "claude-sonnet-4-20250514",
                 extra_request_body = {
                     temperature = 0.75,
                     max_tokens = 4096,
@@ -21,7 +21,7 @@ M.opts = {
             },
             gemini = {
                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-                model = "gemini-2.0-flash",
+                model = "gemini-2.5",
                 timeout = 30000, -- Timeout in milliseconds
                 extra_request_body = {
                     generationConfig = {
