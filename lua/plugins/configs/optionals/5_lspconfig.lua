@@ -56,7 +56,7 @@ vim.api.nvim_create_user_command("TSOrganizeImports", function()
   })
 end, { desc = "Organize TypeScript/JavaScript Imports" })
 
-vim.api.nvim_create_user_command("RuffFix", function()
+vim.api.nvim_create_user_command("RuffCheckAndFix", function()
   local file = vim.api.nvim_buf_get_name(0)
   if file == "" then
     print("No file detected")
