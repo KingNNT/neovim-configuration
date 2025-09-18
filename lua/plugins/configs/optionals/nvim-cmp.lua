@@ -78,75 +78,75 @@ cmp.setup.cmdline(':', {
     })
 })
 
--- Set up lspconfig.
+-- Set up lsp configs with capabilities.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require('lspconfig')['bashls'].setup {
+vim.lsp.config('bashls', {
     capabilities = capabilities
-}
-require('lspconfig')['cmake'].setup {
+})
+vim.lsp.config('cmake', {
     capabilities = capabilities
-}
-require('lspconfig')['cssls'].setup {
+})
+vim.lsp.config('cssls', {
     capabilities = capabilities
-}
-require('lspconfig')['cssmodules_ls'].setup {
+})
+vim.lsp.config('cssmodules_ls', {
     capabilities = capabilities
-}
-require('lspconfig')['dockerls'].setup {
+})
+vim.lsp.config('dockerls', {
     capabilities = capabilities
-}
-require('lspconfig')['docker_compose_language_service'].setup {
+})
+vim.lsp.config('docker_compose_language_service', {
     capabilities = capabilities
-}
-require('lspconfig')['eslint'].setup {
+})
+vim.lsp.config('eslint', {
     capabilities = capabilities
-}
-require('lspconfig')['emmet_language_server'].setup {
+})
+vim.lsp.config('emmet_language_server', {
     capabilities = capabilities
-}
-require('lspconfig')['graphql'].setup {
+})
+vim.lsp.config('graphql', {
     capabilities = capabilities
-}
-require('lspconfig')['jsonls'].setup {
+})
+vim.lsp.config('jsonls', {
     capabilities = capabilities
-}
-require('lspconfig')['ts_ls'].setup {
+})
+vim.lsp.config('ts_ls', {
     capabilities = capabilities
-}
-require('lspconfig')['nginx_language_server'].setup {
+})
+vim.lsp.config('nginx_language_server', {
     capabilities = capabilities
-}
-require('lspconfig')['intelephense'].setup {
+})
+vim.lsp.config('intelephense', {
     capabilities = capabilities
-}
-require('lspconfig')['prismals'].setup {
+})
+vim.lsp.config('prismals', {
     capabilities = capabilities,
     disableOrganizeImports = true,
-}
-require('lspconfig')['pyright'].setup {
+})
+vim.lsp.config('pyright', {
     capabilities = capabilities,
     disableOrganizeImports = true,
-}
-require('lspconfig')['ruff'].setup {
+})
+vim.lsp.config('ruff', {
     capabilities = capabilities,
     disableOrganizeImports = true,
-}
-require('lspconfig')['rust_analyzer'].setup {
+})
+vim.lsp.config('rust_analyzer', {
     capabilities = capabilities,
-}
-require('lspconfig')['sqlls'].setup {
+})
+vim.lsp.config('sqlls', {
     capabilities = capabilities,
-}
-require('lspconfig')['tailwindcss'].setup {
+})
+vim.lsp.config('tailwindcss', {
     capabilities = capabilities
-}
-require('lspconfig')['terraformls'].setup {
+})
+vim.lsp.config('terraformls', {
     capabilities = capabilities
-}
-require('lspconfig')['vuels'].setup {
+})
+vim.lsp.config('vuels', {
     capabilities = capabilities
-}
-require('lspconfig')['lua_ls'].setup {
+})
+vim.lsp.config('lua_ls', {
     capabilities = capabilities
-}
+})

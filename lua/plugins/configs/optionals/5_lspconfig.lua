@@ -1,5 +1,4 @@
 -- Setup language servers.
-local lspconfig = require('lspconfig')
 local util = require 'lspconfig.util'
 
 -- Global mappings.
@@ -94,11 +93,11 @@ end, {
 
 -- LSP config
 
-lspconfig.cssls.setup {
+vim.lsp.config('cssls', {
   filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
-}
+})
 vim.lsp.enable('cssmodules_ls')
-lspconfig.ts_ls.setup {
+vim.lsp.config('ts_ls', {
   settings = {
     typescript = {
       format = {
@@ -115,11 +114,12 @@ lspconfig.ts_ls.setup {
       }
     }
   }
-}
-lspconfig.intelephense.setup {
+})
+vim.lsp.enable('ts_ls')
+vim.lsp.config('intelephense', {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
-}
+})
 vim.lsp.enable('prismals')
 vim.lsp.config('pyright', {
   filetypes = { 'python' },
