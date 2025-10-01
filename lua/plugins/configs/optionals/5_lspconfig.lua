@@ -96,7 +96,6 @@ end, {
 vim.lsp.config('cssls', {
   filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
 })
-vim.lsp.enable('cssmodules_ls')
 vim.lsp.config('ts_ls', {
   settings = {
     typescript = {
@@ -115,12 +114,10 @@ vim.lsp.config('ts_ls', {
     }
   }
 })
-vim.lsp.enable('ts_ls')
 vim.lsp.config('intelephense', {
   filetypes = { "php" },
   root_dir = util.root_pattern("composer.json", ".git")
 })
-vim.lsp.enable('prismals')
 vim.lsp.config('pyright', {
   filetypes = { 'python' },
 })
@@ -132,9 +129,6 @@ vim.lsp.config('ruff', {
     }
   }
 })
-vim.lsp.enable('rust_analyzer')
-vim.lsp.enable('tailwindcss')
-vim.lsp.enable('terraformls')
 
 vim.lsp.config('vuels', {
   -- add filetypes for typescript, javascript and vue
@@ -196,3 +190,17 @@ vim.lsp.config('lua_ls', {
     Lua = {}
   }
 })
+
+-- Enable all LSP servers
+vim.lsp.enable('cssls')
+vim.lsp.enable('cssmodules_ls')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('intelephense')
+vim.lsp.enable('prismals')
+vim.lsp.enable('pyright')
+vim.lsp.enable('ruff')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('terraformls')
+vim.lsp.enable('vuels')
+vim.lsp.enable('lua_ls')
