@@ -92,115 +92,120 @@ end, {
 })
 
 -- LSP config
+local servers = require('plugins.configs.lsp.servers')
 
-vim.lsp.config('cssls', {
-  filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
-})
-vim.lsp.config('ts_ls', {
-  settings = {
-    typescript = {
-      format = {
-        indentSize = 2,
-        tabSize = 2,
-        convertTabsToSpaces = false, -- Set to true if you want spaces instead of tabs
-      }
-    },
-    javascript = {
-      format = {
-        indentSize = 2,
-        tabSize = 2,
-        convertTabsToSpaces = false,
-      }
-    }
-  }
-})
-vim.lsp.config('intelephense', {
-  filetypes = { "php" },
-  root_dir = util.root_pattern("composer.json", ".git")
-})
-vim.lsp.config('pyright', {
-  filetypes = { 'python' },
-})
-vim.lsp.config('ruff', {
-  filetypes = { 'python' },
-  init_options = {
+-- Get capabilities from nvim-cmp
+local capabilities = _G.cmp_nvim_lsp_capabilities or vim.lsp.protocol.make_client_capabilities()
+
+-- Server-specific configurations
+local server_configs = {
+  cssls = {
+    filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
+    capabilities = capabilities,
+  },
+  ts_ls = {
+    capabilities = capabilities,
     settings = {
-      organizeImports = true
+      typescript = {
+        format = {
+          indentSize = 2,
+          tabSize = 2,
+          convertTabsToSpaces = false,
+        }
+      },
+      javascript = {
+        format = {
+          indentSize = 2,
+          tabSize = 2,
+          convertTabsToSpaces = false,
+        }
+      }
     }
-  }
-})
-
-vim.lsp.config('vuels', {
-  -- add filetypes for typescript, javascript and vue
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-  init_options = {
-    vue = {
-      -- disable hybrid mode
-      hybridMode = false,
+  },
+  intelephense = {
+    filetypes = { "php" },
+    root_dir = util.root_pattern("composer.json", ".git"),
+    capabilities = capabilities,
+  },
+  pyright = {
+    filetypes = { 'python' },
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+  },
+  ruff = {
+    filetypes = { 'python' },
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+    init_options = {
+      settings = {
+        organizeImports = true
+      }
+    }
+  },
+  vuels = {
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+    capabilities = capabilities,
+    init_options = {
+      vue = {
+        hybridMode = false,
+      },
     },
   },
-})
-
-vim.lsp.config('lua_ls', {
-  filetypes = { 'lua' },
-  on_init = function(client)
-    if client.workspace_folders then
-      local path = client.workspace_folders[1].name
-      if
-          path ~= vim.fn.stdpath('config')
-          and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
-      then
-        return
+  lua_ls = {
+    filetypes = { 'lua' },
+    capabilities = capabilities,
+    on_init = function(client)
+      if client.workspace_folders then
+        local path = client.workspace_folders[1].name
+        if
+            path ~= vim.fn.stdpath('config')
+            and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
+        then
+          return
+        end
       end
-    end
 
-    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most
-        -- likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Tell the language server how to find Lua modules same way as Neovim
-        -- (see `:h lua-module-load`)
-        path = {
-          'lua/?.lua',
-          'lua/?/init.lua',
+      client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+        runtime = {
+          version = 'LuaJIT',
+          path = {
+            'lua/?.lua',
+            'lua/?/init.lua',
+          },
         },
-      },
-      -- Make the server aware of Neovim runtime files
-      workspace = {
-        checkThirdParty = false,
-        library = {
-          vim.env.VIMRUNTIME
-          -- Depending on the usage, you might want to add additional paths
-          -- here.
-          -- '${3rd}/luv/library'
-          -- '${3rd}/busted/library'
+        workspace = {
+          checkThirdParty = false,
+          library = {
+            vim.env.VIMRUNTIME
+          }
         }
-        -- Or pull in all of 'runtimepath'.
-        -- NOTE: this is a lot slower and will cause issues when working on
-        -- your own configuration.
-        -- See https://github.com/neovim/nvim-lspconfig/issues/3189
-        -- library = {
-        --   vim.api.nvim_get_runtime_file('', true),
-        -- }
-      }
+      })
+    end,
+    settings = {
+      Lua = {}
+    }
+  },
+  prismals = {
+    capabilities = capabilities,
+    disableOrganizeImports = true,
+  },
+}
+
+-- Apply server-specific configurations
+for server_name, config in pairs(server_configs) do
+  vim.lsp.config(server_name, config)
+end
+
+-- Configure all other servers with default capabilities
+for _, server_name in ipairs(servers.servers) do
+  if not server_configs[server_name] then
+    vim.lsp.config(server_name, {
+      capabilities = capabilities
     })
-  end,
-  settings = {
-    Lua = {}
-  }
-})
+  end
+end
 
 -- Enable all LSP servers
-vim.lsp.enable('cssls')
-vim.lsp.enable('cssmodules_ls')
-vim.lsp.enable('ts_ls')
-vim.lsp.enable('intelephense')
-vim.lsp.enable('prismals')
-vim.lsp.enable('pyright')
-vim.lsp.enable('ruff')
-vim.lsp.enable('rust_analyzer')
-vim.lsp.enable('tailwindcss')
-vim.lsp.enable('terraformls')
-vim.lsp.enable('vuels')
-vim.lsp.enable('lua_ls')
+for _, server_name in ipairs(servers.servers) do
+  vim.lsp.enable(server_name)
+end

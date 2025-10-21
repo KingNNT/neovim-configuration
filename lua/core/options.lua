@@ -41,12 +41,6 @@ opt.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
--- disable some default providers
-for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
-    vim.g["loaded_" .. provider .. "_provider"] = 0
-end
-
-
 -------------------------------------- autocmds ------------------------------------------
 local autocmd = vim.api.nvim_create_autocmd
 

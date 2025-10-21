@@ -162,7 +162,7 @@ M.opts = {
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
-    picker = { enabled = true },
+    picker = opts_picker,
     notifier = {
         enabled = true,
         timeout = 3000,

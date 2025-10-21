@@ -17,6 +17,9 @@ local plugins = {
         "nvim-tree/nvim-web-devicons",
         lazy = false,
         priority = 980,
+        config = function()
+            require('plugins.configs.nvim-web-devicons')
+        end,
     },
     -- UI Enhancements
     {
@@ -24,60 +27,79 @@ local plugins = {
         priority = 970,
         lazy = false,
         opts = function()
-            return require('plugins.configs.optionals.snacks').opts
+            return require('plugins.configs.snacks').opts
         end,
         keys = function()
-            return require('plugins.configs.optionals.snacks').keys
+            return require('plugins.configs.snacks').keys
         end,
         init = function()
-            return require('plugins.configs.optionals.snacks').init
+            return require('plugins.configs.snacks').init
         end,
     },
     {
         -- A clean, dark Neovim theme written in Lua, with support for lsp, treesitter and lots of plugins. Includes additional themes for Kitty, Alacritty, iTerm and Fish.
         "folke/tokyonight.nvim",
-        lazy = true,
+        lazy = false,
+        priority = 960,
+        config = function()
+            require('plugins.configs.tokyonight')
+        end,
     },
     {
         -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
         "nvim-lualine/lualine.nvim",
-        lazy = true,
+        event = "VeryLazy",
+        config = function()
+            require('plugins.configs.lualine')
+        end,
     },
     {
         -- A snazzy bufferline for Neovim
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
-        lazy = true
+        event = "VeryLazy",
+        config = function()
+            require('plugins.configs.bufferline')
+        end,
     },
     {
         -- Not UFO in the sky, but an ultra fold in Neovim.
         'kevinhwang91/nvim-ufo',
-        lazy = true,
-        dependencies = 'kevinhwang91/promise-async'
+        event = "VeryLazy",
+        dependencies = 'kevinhwang91/promise-async',
+        config = function()
+            require('plugins.configs.nvim-ufo')
+        end,
     },
     {
         -- Navigate your code with search labels, enhanced character motions and Treesitter integration
         "folke/flash.nvim",
         event = "VeryLazy",
         opts = function()
-            return require('plugins.configs.optionals.flash').opts
+            return require('plugins.configs.flash').opts
         end,
         keys = function()
-            return require('plugins.configs.optionals.flash').keys
+            return require('plugins.configs.flash').keys
         end,
     },
     -- LSP & Autocompletion
     {
         -- Quickstart configs for Nvim LSP
         "neovim/nvim-lspconfig",
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require('plugins.configs.lspconfig')
+        end,
     },
     {
         -- Portable package manager for Neovim that runs everywhere Neovim runs.
         -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
         "williamboman/mason.nvim",
-        lazy = true,
+        cmd = "Mason",
+        config = function()
+            require('plugins.configs.mason')
+        end,
     },
     {
         -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
@@ -86,11 +108,17 @@ local plugins = {
             "neovim/nvim-lspconfig",
             "williamboman/mason.nvim"
         },
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require('plugins.configs.mason-lspconfig')
+        end,
     },
     {
         "mfussenegger/nvim-lint",
-        lazy = true
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require('plugins.configs.nvim-lint')
+        end,
     },
     {
         -- A completion plugin for neovim coded in Lua
@@ -104,16 +132,27 @@ local plugins = {
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip"
         },
+        event = "InsertEnter",
+        config = function()
+            require('plugins.configs.nvim-cmp')
+        end,
     },
     {
         -- Lightweight yet powerful formatter plugin for Neovim
         "stevearc/conform.nvim",
-        lazy = true
+        event = { "BufReadPre", "BufNewFile" },
+        cmd = "ConformInfo",
+        config = function()
+            require('plugins.configs.conform')
+        end,
     },
     -- Debugging & Testing
     {
         "mfussenegger/nvim-dap",
-        lazy = true
+        cmd = { "DapContinue", "DapToggleBreakpoint" },
+        keys = function()
+            return require('plugins.configs.nvim-dap').keys
+        end,
     },
     {
         "rcarriga/nvim-dap-ui",
@@ -121,7 +160,10 @@ local plugins = {
             "mfussenegger/nvim-dap",
             "nvim-neotest/nvim-nio"
         },
-        lazy = true
+        cmd = { "DapContinue", "DapToggleBreakpoint" },
+        config = function()
+            require('plugins.configs.nvim-dapui')
+        end,
     },
     {
         -- An extensible framework for interacting with tests within NeoVim.
@@ -136,23 +178,36 @@ local plugins = {
             "thenbe/neotest-playwright",
             "nvim-neotest/neotest-python"
         },
-        lazy = true
+        cmd = "Neotest",
+        config = function()
+            require('plugins.configs.neotest')
+        end,
     },
     -- Productivity Tools
     {
         -- Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
         'numToStr/Comment.nvim',
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require('plugins.configs.Comment')
+        end,
     },
     {
         -- Highlight, list and search todo comments in your projects
         'folke/todo-comments.nvim',
-        lazy = true
+        event = { "BufReadPre", "BufNewFile" },
+        cmd = { "TodoTrouble", "TodoTelescope" },
+        config = function()
+            require('plugins.configs.todo-comments')
+        end,
     },
     {
         -- Rainbow delimiters for Neovim with Tree-sitter
         'HiPhish/rainbow-delimiters.nvim',
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require('plugins.configs.rainbow-delimiters')
+        end,
     },
     {
         -- Nvim Treesitter configurations and abstraction layer
@@ -161,35 +216,51 @@ local plugins = {
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
         },
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
+        cmd = { "TSUpdate", "TSInstall" },
+        config = function()
+            require('plugins.configs.nvim-treesitter')
+        end,
     },
     {
         -- A better annotation generator. Supports multiple languages and annotation conventions.
         "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter",
-        config = true,
-        lazy = true
+        cmd = "Neogen",
+        config = function()
+            require('plugins.configs.neogen')
+        end,
     },
     {
         -- A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        lazy = true,
+        cmd = "Trouble",
+        config = function()
+            require('plugins.configs.trouble')
+        end,
     },
     -- Git Integration
     {
         -- Git integration for buffers
         'lewis6991/gitsigns.nvim',
-        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             'tpope/vim-fugitive'
-        }
+        },
+        config = function()
+            require('plugins.configs.gitsigns')
+        end,
     },
     -- Miscellaneous
     {
         -- Color for hex code
         "NvChad/nvim-colorizer.lua",
-        lazy = true
+        event = { "BufReadPre", "BufNewFile" },
+        cmd = { "ColorizerToggle", "ColorizerAttachToBuffer" },
+        config = function()
+            require('plugins.configs.nvim-colorizer')
+        end,
     },
     {
         -- Vim plugin for automatic time tracking and metrics generated from your programming activity.
@@ -201,10 +272,10 @@ local plugins = {
         "folke/which-key.nvim",
         event = "VeryLazy",
         opts = function()
-            return require('plugins.configs.optionals.3_which-key').opts
+            return require('plugins.configs.which-key').opts
         end,
         init = function()
-            return require('plugins.configs.optionals.3_which-key').init
+            return require('plugins.configs.which-key').init
         end,
         lazy = true,
     },
@@ -212,11 +283,16 @@ local plugins = {
         -- autopairs for neovim written by lua
         'windwp/nvim-autopairs',
         event = "InsertEnter",
-        lazy = true
+        config = function()
+            require('plugins.configs.nvim-autopairs')
+        end,
     },
     {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
+        config = function()
+            require('plugins.configs.lazydev')
+        end,
     },
 }
 
