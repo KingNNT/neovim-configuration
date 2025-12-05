@@ -100,10 +100,11 @@ local capabilities = _G.cmp_nvim_lsp_capabilities or vim.lsp.protocol.make_clien
 -- Server-specific configurations
 local server_configs = {
   cssls = {
-    filetypes = { 'typescript', 'javascript', 'vue', 'css', 'scss' },
+    filetypes = { 'css', 'scss', 'sass', 'less' },
     capabilities = capabilities,
   },
   ts_ls = {
+    filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
     capabilities = capabilities,
     settings = {
       typescript = {
@@ -188,6 +189,18 @@ local server_configs = {
   prismals = {
     capabilities = capabilities,
     disableOrganizeImports = true,
+  },
+  graphql = {
+    filetypes = { 'graphql', 'gql' },
+    capabilities = capabilities,
+  },
+  eslint = {
+    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+    capabilities = capabilities,
+  },
+  tailwindcss = {
+    filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+    capabilities = capabilities,
   },
 }
 
