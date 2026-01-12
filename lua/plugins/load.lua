@@ -240,6 +240,27 @@ local plugins = {
             require('plugins.configs.trouble')
         end,
     },
+    {
+        "3rd/image.nvim",
+        ft = { "markdown", "python", "jupyter" },
+        opts = require("plugins.configs.imagemagick").opts,
+    },
+    {
+        "GCBallesteros/jupytext.nvim",
+        lazy = false, -- Must load early to intercept .ipynb files
+        opts = require("plugins.configs.jupytext").opts,
+    },
+    {
+        "benlubas/molten-nvim",
+        build = ":UpdateRemotePlugins",
+        ft = { "python", "jupyter" },
+        dependencies = {
+            "3rd/image.nvim",
+            "GCBallesteros/jupytext.nvim",
+        },
+        init = require("plugins.configs.molten").init,
+        keys = require("plugins.configs.molten").keys,
+    },
     -- Git Integration
     {
         -- Git integration for buffers
