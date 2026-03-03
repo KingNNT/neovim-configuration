@@ -276,9 +276,8 @@ local plugins = {
     -- Miscellaneous
     {
         -- Color for hex code
-        "NvChad/nvim-colorizer.lua",
-        event = { "BufReadPre", "BufNewFile" },
-        cmd = { "ColorizerToggle", "ColorizerAttachToBuffer" },
+        "catgoose/nvim-colorizer.lua",
+        event = { "BufReadPre" },
         config = function()
             require('plugins.configs.nvim-colorizer')
         end,
