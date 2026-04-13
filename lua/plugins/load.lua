@@ -308,6 +308,17 @@ local plugins = {
         end,
     },
     {
+        -- Find and Replace across the project, powered by ripgrep
+        'MagicDuck/grug-far.nvim',
+        cmd = { "GrugFar", "GrugFarWithin" },
+        opts = function()
+            return require('plugins.configs.grug-far').opts
+        end,
+        keys = function()
+            return require('plugins.configs.grug-far').keys
+        end,
+    },
+    {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
         config = function()
