@@ -10,6 +10,7 @@ require("conform").setup({
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
+        jsonc = { "prettier" },
         python = function(bufnr)
             local result = {}
             if require("conform").get_formatter_info("ruff_format", bufnr).available then
