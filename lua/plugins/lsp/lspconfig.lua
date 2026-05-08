@@ -24,8 +24,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
 
     -- Native treesitter folding (replaces nvim-ufo)
-    vim.bo[ev.buf].foldmethod = 'expr'
-    vim.bo[ev.buf].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+    -- foldmethod and foldexpr are window-local options, use vim.wo not vim.bo
+    vim.wo.foldmethod = 'expr'
+    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
     -- Custom <space>-prefixed mappings (kept; these aren't 0.11+ defaults).
     local opts = { buffer = ev.buf }
