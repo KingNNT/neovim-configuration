@@ -34,10 +34,10 @@ Categories: coding, debug, extras, git, lsp, notebooks, tools, ui
 
 ### lsp/
 - neovim/nvim-lspconfig — native LSP config
-- hrsh7th/nvim-cmp — completion (+ cmp-nvim-lsp, cmp-nvim-lua, cmp-buffer, cmp-path, cmp-cmdline, LuaSnip, cmp_luasnip)
+- saghen/blink.cmp — completion (built-in sources: lsp, path, snippets, buffer; auto-brackets; cmdline; signature help; v1 stable)
 - stevearc/conform.nvim — formatting
 - mfussenegger/nvim-lint — linting
-- williamboman/mason.nvim — package manager (+ mason-lspconfig, cmp-nvim-lsp as eager deps)
+- williamboman/mason.nvim — package manager (+ mason-lspconfig, blink.cmp as eager deps)
 
 ### notebooks/
 - 3rd/image.nvim — image rendering

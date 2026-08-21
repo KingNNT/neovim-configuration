@@ -8,7 +8,7 @@ opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
 -- Native insert-mode auto-completion (Neovim 0.12+).
--- Disabled because nvim-cmp owns the completion UI; enabling both causes duplicate menus.
+-- Disabled because blink.cmp owns the completion UI; enabling both causes duplicate menus.
 vim.o.autocomplete = false
 
 -- Popup menu border (Neovim 0.12+)

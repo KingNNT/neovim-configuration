@@ -8,7 +8,7 @@
 ## Key Files
 - `lua/plugins/lsp/lspconfig.lua` — `vim.lsp.config()` calls, `LspAttach` autocmd, user commands
 - `lua/plugins/lsp/mason.lua` — mason + mason-lspconfig setup
-- `lua/plugins/lsp/cmp.lua` — nvim-cmp completion setup
+- `lua/plugins/lsp/blink.lua` — blink.cmp completion setup
 - `lua/plugins/lsp/conform.lua` — formatting via conform.nvim
 - `lua/plugins/lsp/lint.lua` — linting via nvim-lint
 
